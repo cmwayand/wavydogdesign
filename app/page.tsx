@@ -303,11 +303,6 @@ export default function Home() {
 										</li>
 									</ul>
 								</div>
-								<div className="mt-6">
-									<Button className="w-full" asChild>
-										<Link href="#contact">Get Quote</Link>
-									</Button>
-								</div>
 							</div>
 							<div className="flex flex-col rounded-lg border p-6 shadow-sm bg-primary/5 border-primary/20">
 								<div className="space-y-2">
@@ -336,11 +331,6 @@ export default function Home() {
 										</li>
 									</ul>
 								</div>
-								<div className="mt-6">
-									<Button className="w-full" asChild>
-										<Link href="#contact">Get Quote</Link>
-									</Button>
-								</div>
 							</div>
 							<div className="flex flex-col rounded-lg border p-6 shadow-sm">
 								<div className="space-y-2">
@@ -368,11 +358,6 @@ export default function Home() {
 											<span>Priority support and consulting</span>
 										</li>
 									</ul>
-								</div>
-								<div className="mt-6">
-									<Button className="w-full" asChild>
-										<Link href="#contact">Get Quote</Link>
-									</Button>
 								</div>
 							</div>
 						</div>
