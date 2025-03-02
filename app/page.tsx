@@ -20,8 +20,12 @@ export default function Home() {
 			<header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
 				<div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
 					<div className="flex gap-2 items-center text-xl font-bold">
-						<Image src="/wavydog long logo.svg" width={250} height={50} alt="logo" />
-					
+						<Image
+							src="/wavydog long logo.svg"
+							width={250}
+							height={50}
+							alt="logo"
+						/>
 					</div>
 					<div className="flex flex-1 items-center justify-end space-x-4">
 						<nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
@@ -31,12 +35,12 @@ export default function Home() {
 							>
 								Services
 							</Link>
-							<Link
+							{/* <Link
 								href="#portfolio"
 								className="transition-colors hover:text-foreground/80"
 							>
 								Portfolio
-							</Link>
+							</Link> */}
 							<Link
 								href="#about"
 								className="transition-colors hover:text-foreground/80"
@@ -452,7 +456,7 @@ export default function Home() {
 					<p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
 						© {new Date().getFullYear()} Wavy Dog Design. All rights reserved.
 					</p>
-					<div className="flex items-center gap-4 text-sm text-muted-foreground">
+					{/* <div className="flex items-center gap-4 text-sm text-muted-foreground">
 						<Link
 							href="#"
 							className="underline underline-offset-4 hover:text-foreground"
@@ -465,7 +469,7 @@ export default function Home() {
 						>
 							Privacy
 						</Link>
-					</div>
+					</div> */}
 				</div>
 			</footer>
 		</div>
