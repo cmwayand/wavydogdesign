@@ -8,8 +8,6 @@ import {
 	Globe,
 	MessageSquare,
 	PenTool,
-	Instagram,
-	Facebook,
 	Linkedin,
 } from "lucide-react";
 
