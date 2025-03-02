@@ -101,7 +101,7 @@ export default function Home() {
 
 				<section
 					id="services"
-					className="w-full py-12 md:py-24 lg:py-32 bg-muted"
+					className="w-full py-8 md:py-16 lg:py-20 bg-muted"
 				>
 					<div className="container px-4 md:px-6">
 						<div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -212,7 +212,7 @@ export default function Home() {
 					</div>
 				</section> */}
 
-				<section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
+				<section id="about" className="w-full py-8 md:py-16 lg:py-20 bg-muted">
 					<div className="container px-4 md:px-6">
 						<div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
 							<div className="flex items-center justify-center">
