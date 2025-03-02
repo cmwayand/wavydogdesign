@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -12,6 +14,7 @@ import {
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import ContactForm from "@/components/ContactForm";
 
 export default function Home() {
 	return (
@@ -171,7 +174,8 @@ export default function Home() {
 					</div>
 				</section>
 
-				<section id="portfolio" className="w-full py-12 md:py-24 lg:py-32">
+				{/* Will add back when more images are available */}
+				{/* <section id="portfolio" className="w-full py-12 md:py-24 lg:py-32">
 					<div className="container px-4 md:px-6">
 						<div className="flex flex-col items-center justify-center space-y-4 text-center">
 							<div className="space-y-2">
@@ -204,7 +208,7 @@ export default function Home() {
 							</Button>
 						</div>
 					</div>
-				</section>
+				</section> */}
 
 				<section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
 					<div className="container px-4 md:px-6">
@@ -408,30 +412,29 @@ export default function Home() {
 								<div className="space-y-2">
 									<p className="flex items-center gap-2">
 										<MessageSquare className="h-4 w-4 text-primary" />
-										<span>hello@wavydogdesign.com</span>
-									</p>
-									<p className="flex items-center gap-2">
-										<Globe className="h-4 w-4 text-primary" />
-										<span>www.wavydogdesign.com</span>
+										<span>cmwayand@gmail.com</span>
 									</p>
 								</div>
 								<div className="flex space-x-4">
-									<Link
+									{/* <Link
 										href="#"
+										target="_blank"
 										className="rounded-full bg-primary/10 p-2 text-primary hover:bg-primary/20"
 									>
 										<Instagram className="h-5 w-5" />
 										<span className="sr-only">Instagram</span>
-									</Link>
-									<Link
+									</Link> */}
+									{/* <Link
 										href="#"
+										target="_blank"
 										className="rounded-full bg-primary/10 p-2 text-primary hover:bg-primary/20"
 									>
 										<Facebook className="h-5 w-5" />
 										<span className="sr-only">Facebook</span>
-									</Link>
+									</Link> */}
 									<Link
-										href="#"
+										href="https://www.linkedin.com/company/wavydogdesign/about/"
+										target="_blank"
 										className="rounded-full bg-primary/10 p-2 text-primary hover:bg-primary/20"
 									>
 										<Linkedin className="h-5 w-5" />
@@ -440,85 +443,7 @@ export default function Home() {
 								</div>
 							</div>
 							<div className="rounded-lg border bg-background p-6 shadow-sm">
-								<form className="space-y-4">
-									<div className="grid grid-cols-2 gap-4">
-										<div className="space-y-2">
-											<label
-												htmlFor="first-name"
-												className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-											>
-												First name
-											</label>
-											<input
-												id="first-name"
-												className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-												placeholder="John"
-											/>
-										</div>
-										<div className="space-y-2">
-											<label
-												htmlFor="last-name"
-												className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-											>
-												Last name
-											</label>
-											<input
-												id="last-name"
-												className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-												placeholder="Doe"
-											/>
-										</div>
-									</div>
-									<div className="space-y-2">
-										<label
-											htmlFor="email"
-											className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-										>
-											Email
-										</label>
-										<input
-											id="email"
-											type="email"
-											className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-											placeholder="john.doe@example.com"
-										/>
-									</div>
-									<div className="space-y-2">
-										<label
-											htmlFor="project-type"
-											className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-										>
-											Project Type
-										</label>
-										<select
-											id="project-type"
-											className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-										>
-											<option value="">Select a project type</option>
-											<option value="website">Website Design</option>
-											<option value="branding">Branding & Logo</option>
-											<option value="social">Social Media</option>
-											<option value="marketing">Marketing</option>
-											<option value="other">Other</option>
-										</select>
-									</div>
-									<div className="space-y-2">
-										<label
-											htmlFor="message"
-											className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-										>
-											Message
-										</label>
-										<textarea
-											id="message"
-											className="flex min-h-[120px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-											placeholder="Tell us about your project..."
-										></textarea>
-									</div>
-									<Button type="submit" className="w-full">
-										Send Message
-									</Button>
-								</form>
+								<ContactForm />
 							</div>
 						</div>
 					</div>
