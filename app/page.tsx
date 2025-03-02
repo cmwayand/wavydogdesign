@@ -218,8 +218,8 @@ export default function Home() {
 							<div className="flex items-center justify-center">
 								<Image
 									src="/aboutimage.jpg"
-									width={400}
-									height={400}
+									width={500}
+									height={500}
 									alt="About Wavy Dog Design"
 									className="rounded-lg object-cover"
 								/>
@@ -230,24 +230,22 @@ export default function Home() {
 										About Wavy Dog Design
 									</h2>
 									<p className="max-w-[600px] text-muted-foreground md:text-xl">
-										We're passionate about helping businesses of all sizes stand
-										out with exceptional design and effective marketing
-										strategies.
+										A design agency inspired by Wavy Dog Design founder's cockapoo, Pippa. We bring a professional, yet friendly and playful vibe to each client.
 									</p>
 								</div>
 								<ul className="grid gap-2">
 									<li className="flex items-center gap-2">
 										<ArrowRight className="h-4 w-4 text-primary" />
-										<span>Years of experience across multiple industries</span>
+										<span>10+ years of experience in mulitple areas of design</span>
 									</li>
 									<li className="flex items-center gap-2">
 										<ArrowRight className="h-4 w-4 text-primary" />
-										<span>Personalized approach to every project</span>
+										<span>Personalized approach to meeting your needs </span>
 									</li>
 									<li className="flex items-center gap-2">
 										<ArrowRight className="h-4 w-4 text-primary" />
 										<span>
-											Commitment to delivering results that exceed expectations
+											Friendly, engaging and enthusiastic
 										</span>
 									</li>
 									<li className="flex items-center gap-2">
