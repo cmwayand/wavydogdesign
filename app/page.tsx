@@ -80,9 +80,9 @@ export default function Home() {
 											Start Your Project <ArrowRight className="ml-2 h-4 w-4" />
 										</Link>
 									</Button>
-									<Button variant="outline" size="lg" asChild>
+									{/* <Button variant="outline" size="lg" asChild>
 										<Link href="#portfolio">View Portfolio</Link>
-									</Button>
+									</Button> */}
 								</div>
 							</div>
 							<div className="flex items-center justify-center">
@@ -212,7 +212,7 @@ export default function Home() {
 					</div>
 				</section> */}
 
-				<section id="about" className="w-full py-8 md:py-16 lg:py-20 bg-muted">
+				<section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
 					<div className="container px-4 md:px-6">
 						<div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
 							<div className="flex items-center justify-center">
