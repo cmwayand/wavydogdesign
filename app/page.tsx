@@ -230,7 +230,7 @@ export default function Home() {
 										About Wavy Dog Design
 									</h2>
 									<p className="max-w-[600px] text-muted-foreground md:text-xl">
-										A design agency inspired by Wavy Dog Design founder's cockapoo, Pippa. We bring a professional, yet friendly and playful vibe to each client.
+										A design agency inspired by Wavy Dog Design founder's cockapoo, Pippa. We create a professional, yet friendly experience every time. 
 									</p>
 								</div>
 								<ul className="grid gap-2">
