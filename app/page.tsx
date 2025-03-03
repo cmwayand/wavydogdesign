@@ -390,8 +390,7 @@ export default function Home() {
 								<div className="space-y-2">
 									<h3 className="text-xl font-bold">Contact Information</h3>
 									<p className="text-muted-foreground">
-										We'd love to hear from you. Reach out through any of these
-										channels.
+										Please reach out, we'd love to hear from you!
 									</p>
 								</div>
 								<div className="space-y-2">
