@@ -54,8 +54,9 @@ export default function Home() {
 								Pricing
 							</Link>
 						</nav>
+						
 						<Button asChild>
-							<Link href="#contact">Get in Touch</Link>
+							<Link href="/shop">Shop</Link>
 						</Button>
 					</div>
 				</div>
@@ -230,7 +231,7 @@ export default function Home() {
 										About Wavy Dog Design
 									</h2>
 									<p className="max-w-[600px] text-muted-foreground md:text-xl">
-										A design agency inspired by the founder's cockapoo, Pippa. We create a professional, yet friendly experience every time. 
+										A design company inspired by the founder's cockapoo, Pippa. We create a professional, yet friendly experience every time. 
 									</p>
 								</div>
 								<ul className="grid gap-2">
