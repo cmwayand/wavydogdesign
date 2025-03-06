@@ -24,7 +24,8 @@ export default function Home() {
 							src="/wavydog long logo.svg"
 							width={250}
 							height={50}
-							alt="logo"
+							alt="Wavy Dog Design Logo"
+							priority
 						/>
 					</div>
 					<div className="flex flex-1 items-center justify-end space-x-4">
@@ -91,9 +92,10 @@ export default function Home() {
 									src="/heroimage.jpg"
 									width={550}
 									height={550}
-									alt="Hero Image"
+									alt="Creative design solutions showcase"
 									className="rounded-lg object-cover"
 									priority
+									quality={100}
 								/>
 							</div>
 						</div>
@@ -221,8 +223,10 @@ export default function Home() {
 									src="/aboutimage.jpg"
 									width={500}
 									height={500}
-									alt="About Wavy Dog Design"
+									alt="About Wavy Dog Design - Pippa the inspiration"
 									className="rounded-lg object-cover"
+									quality={95}
+									loading="eager"
 								/>
 							</div>
 							<div className="flex flex-col justify-center space-y-4">
@@ -437,7 +441,7 @@ export default function Home() {
 			<footer className="w-full border-t py-6 md:py-0">
 				<div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
 					<p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
-						© {new Date().getFullYear()} Wavy Dog Design LLC. All rights reserved.
+						&copy; {new Date().getFullYear()} Wavy Dog Design LLC. All rights reserved.
 					</p>
 					{/* <div className="flex items-center gap-4 text-sm text-muted-foreground">
 						<Link
