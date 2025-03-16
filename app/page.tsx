@@ -29,7 +29,7 @@ export default function Home() {
 					</div>
 					<div className="flex flex-1 items-center justify-end space-x-4">
 						<nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
-							<Link
+							<Link 
 								href="#services"
 								className="transition-colors hover:text-foreground/80"
 							>
@@ -56,7 +56,12 @@ export default function Home() {
 						</nav>
 						
 						<Button asChild>
-							<Link href="/shop">Shop</Link>
+							<Link 
+								href="/shop" 				
+								rel="noopener noreferrer"
+							>
+								Shop
+							</Link>
 						</Button>
 					</div>
 				</div>
@@ -64,35 +69,27 @@ export default function Home() {
 			<main className="flex-1">
 				<section className="w-full py-6 md:py-12 lg:py-16 xl:py-24">
 					<div className="container px-4 md:px-6">
-						<div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:grid-cols-2">
-							<div className="flex flex-col justify-center space-y-4">
-								<div className="space-y-2">
-									<h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-										Creative Design Solutions for Your Business
-									</h1>
-									<p className="max-w-[600px] text-muted-foreground md:text-xl">
-										Elevate your brand with custom design and marketing
-										strategies tailored to your unique business needs.
-									</p>
-								</div>
+						<div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:grid-cols-2 items-center">
+							<div className="flex flex-col gap-4">
+								<h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+									Elevate Your Brand With Our Creative Solutions
+								</h1>
+								<p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
+									We specialize in creating stunning websites, engaging social media content, and effective marketing strategies.
+								</p>
 								<div className="flex flex-col gap-2 min-[400px]:flex-row">
-									<Button asChild size="lg">
-										<Link href="#contact">
-											Start Your Project <ArrowRight className="ml-2 h-4 w-4" />
-										</Link>
+									<Button size="lg" asChild>
+										<Link href="#contact">Start Your Project</Link>
 									</Button>
-									{/* <Button variant="outline" size="lg" asChild>
-										<Link href="#portfolio">View Portfolio</Link>
-									</Button> */}
 								</div>
 							</div>
-							<div className="flex items-center justify-center">
+							<div className="flex justify-center lg:justify-end">
 								<Image
-									src="/heroimage.jpg"
-									width={550}
-									height={550}
-									alt="Hero Image"
-									className="rounded-lg object-cover"
+									src="/headerimage2.png"
+									alt="Header illustration"
+									width={600}
+									height={600}
+									className="object-contain"
 									priority
 								/>
 							</div>
@@ -177,38 +174,22 @@ export default function Home() {
 					</div>
 				</section>
 
-				{/* Will add back when more images are available */}
-				{/* <section id="portfolio" className="w-full py-12 md:py-24 lg:py-32">
+				{/* Testimonials Section */}
+				{/* Client testimonials section - commented out for now
+				<section
+					id="testimonials"
+					className="w-full py-12 md:py-24 lg:py-32 bg-background"
+				>
 					<div className="container px-4 md:px-6">
 						<div className="flex flex-col items-center justify-center space-y-4 text-center">
 							<div className="space-y-2">
-								<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-									Our Work
+								<h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+									What Our Clients Say
 								</h2>
-								<p className="max-w-[700px] text-muted-foreground md:text-xl">
-									Showcasing creative solutions across various industries
+								<p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+									Hear from our satisfied clients about their experience working with us.
 								</p>
 							</div>
-						</div>
-						<div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 py-12 md:grid-cols-2 lg:grid-cols-3">
-							{Array.from({ length: 6 }).map((_, i) => (
-								<div key={i} className="overflow-hidden rounded-lg">
-									<Image
-										src={`/placeholder.svg?height=300&width=400&text=Project+${
-											i + 1
-										}`}
-										width={400}
-										height={300}
-										alt={`Portfolio Project ${i + 1}`}
-										className="aspect-video object-cover transition-all hover:scale-105"
-									/>
-								</div>
-							))}
-						</div>
-						<div className="flex justify-center">
-							<Button variant="outline" size="lg">
-								View All Projects
-							</Button>
 						</div>
 					</div>
 				</section> */}
@@ -266,19 +247,24 @@ export default function Home() {
 					</div>
 				</section>
 
-				<section id="pricing" className="w-full py-12 md:py-24 lg:py-32">
+				<section id="pricing" className="w-full py-12 md:py-24 lg:py-32 bg-muted/50">
 					<div className="container px-4 md:px-6">
 						<div className="flex flex-col items-center justify-center space-y-4 text-center">
 							<div className="space-y-2">
 								<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
 									Flexible Pricing
 								</h2>
-								<p className="max-w-[700px] text-muted-foreground md:text-xl">
-									Customized packages tailored to your specific project needs
+								<p className="max-w-[900px] text-muted-foreground md:text-lg mt-2">
+									All packages can be customized to meet your specific needs. Contact us for a personalized quote for your project.
 								</p>
+								<div className="pt-4 pb-8">
+									<Button size="lg" asChild>
+										<Link href="/packages">View Detailed Pricing</Link>
+									</Button>
+								</div>
 							</div>
 						</div>
-						<div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 py-12 md:grid-cols-3">
+						<div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 py-12 md:grid-cols-3 md:gap-6 lg:gap-8">
 							<div className="flex flex-col rounded-lg border p-6 shadow-sm">
 								<div className="space-y-2">
 									<h3 className="text-2xl font-bold">Basic</h3>
@@ -303,7 +289,8 @@ export default function Home() {
 									</ul>
 								</div>
 							</div>
-							<div className="flex flex-col rounded-lg border p-6 shadow-sm bg-primary/5 border-primary/20">
+							<div className="flex flex-col rounded-lg border-2 border-primary p-6 shadow-md relative bg-primary/5 scale-105 md:translate-y-[-1rem]">
+								<div className="absolute -top-3 right-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">Recommended</div>
 								<div className="space-y-2">
 									<h3 className="text-2xl font-bold">Professional</h3>
 									<p className="text-muted-foreground">
@@ -359,13 +346,6 @@ export default function Home() {
 									</ul>
 								</div>
 							</div>
-						</div>
-						<div className="mx-auto max-w-3xl text-center">
-							<p className="text-muted-foreground">
-								All packages are customizable based on your specific needs.
-								Contact us for a personalized quote tailored to your project
-								requirements.
-							</p>
 						</div>
 					</div>
 				</section>

@@ -1,39 +1,24 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
-import "./globals.css";
+import "@/app/globals.css"
+import { Inter } from "next/font/google"
+import { CartProvider } from "./context/cart"
 
-const geistSans = localFont({
-	src: "./fonts/GeistVF.woff",
-	variable: "--font-geist-sans",
-	weight: "100 900",
-});
-const geistMono = localFont({
-	src: "./fonts/GeistMonoVF.woff",
-	variable: "--font-geist-mono",
-	weight: "100 900",
-});
+const inter = Inter({ subsets: ["latin"] })
 
-export const metadata: Metadata = {
+export const metadata = {
 	title: "Wavy Dog Design",
-	description:
-		"Custom web design, branding, marketing and social media solutions to help businesses grow.",
-};
+	description: "Design and marketing solutions for your business",
+}
 
 export default function RootLayout({
 	children,
-}: Readonly<{
-	children: React.ReactNode;
-}>) {
+}: {
+	children: React.ReactNode
+}) {
 	return (
 		<html lang="en">
-			<head>
-				<link rel="icon" href="/wavydogblue.svg" />
-			</head>
-			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-			>
-				{children}
+			<body className={`${inter.className} min-h-screen flex flex-col`}>
+				<CartProvider>{children}</CartProvider>
 			</body>
 		</html>
-	);
+	)
 }
