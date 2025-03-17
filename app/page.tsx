@@ -54,7 +54,7 @@ export default function Home() {
 								Pricing
 							</Link>
 						</nav>
-						
+						{/* Shop button - commented out for now
 						<Button asChild>
 							<Link 
 								href="/shop" 				
@@ -63,21 +63,22 @@ export default function Home() {
 								Shop
 							</Link>
 						</Button>
+						*/}
 					</div>
 				</div>
 			</header>
 			<main className="flex-1">
-				<section className="w-full py-6 md:py-12 lg:py-16 xl:py-24">
+				<section className="w-full py-4 md:py-8 lg:py-12 xl:py-16">
 					<div className="container px-4 md:px-6">
 						<div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:grid-cols-2 items-center">
 							<div className="flex flex-col gap-4">
 								<h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
 									Elevate Your Brand With Our Creative Solutions
 								</h1>
-								<p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
+								<p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400 mt-2">
 									We specialize in creating stunning websites, engaging social media content, and effective marketing strategies.
 								</p>
-								<div className="flex flex-col gap-2 min-[400px]:flex-row">
+								<div className="flex flex-col gap-2 min-[400px]:flex-row mt-4">
 									<Button size="lg" asChild>
 										<Link href="#contact">Start Your Project</Link>
 									</Button>
@@ -85,7 +86,7 @@ export default function Home() {
 							</div>
 							<div className="flex justify-center lg:justify-end">
 								<Image
-									src="/headerimage2.png"
+									src="/headerimage.png"
 									alt="Header illustration"
 									width={600}
 									height={600}
