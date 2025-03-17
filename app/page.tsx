@@ -36,14 +36,8 @@ export default function Home() {
 							>
 								Services
 							</Link>
-							{/* <Link
-								href="#portfolio"
-								className="transition-colors hover:text-foreground/80"
-							>
-								Portfolio
-							</Link> */}
 							<Link
-								href="#about"
+								href="/about"
 								className="transition-colors hover:text-foreground/80"
 							>
 								About
@@ -244,7 +238,7 @@ export default function Home() {
 								</ul>
 								<div>
 									<Button asChild>
-										<Link href="#contact">Work With Us</Link>
+										<Link href="/about">Meet Our Team</Link>
 									</Button>
 								</div>
 							</div>
