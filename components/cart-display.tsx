@@ -1,21 +1,20 @@
 "use client"
 
-import { ShoppingCart } from "lucide-react"
 import { useCart } from "@/app/context/cart"
-import { Button } from "@/components/ui/button"
+import { ShoppingCart } from "lucide-react"
 
 export function CartDisplay() {
   const { state } = useCart()
   const itemCount = state.items.reduce((total, item) => total + item.quantity, 0)
 
   return (
-    <Button variant="ghost" size="icon" className="relative">
+    <div className="flex items-center gap-2">
       <ShoppingCart className="h-5 w-5" />
       {itemCount > 0 && (
-        <span className="absolute -top-1 -right-1 h-4 w-4 rounded-full bg-primary text-[10px] font-medium text-primary-foreground flex items-center justify-center">
+        <span className="rounded-full bg-primary px-2 py-0.5 text-xs text-primary-foreground">
           {itemCount}
         </span>
       )}
-    </Button>
+    </div>
   )
 }

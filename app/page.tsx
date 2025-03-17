@@ -189,63 +189,6 @@ export default function Home() {
 					</div>
 				</section> */}
 
-				<section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
-					<div className="container px-4 md:px-6">
-						<div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
-							<div className="flex items-center justify-center">
-								<Image
-									src="/aboutimage.jpg"
-									width={500}
-									height={500}
-									alt="About Wavy Dog Design - Pippa the inspiration"
-									className="rounded-lg object-cover"
-									quality={95}
-									loading="eager"
-								/>
-							</div>
-							<div className="flex flex-col justify-center space-y-4">
-								<div className="space-y-2">
-									<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-										About Wavy Dog Design
-									</h2>
-									<p className="max-w-[600px] text-muted-foreground md:text-xl">
-										A design company inspired by the founder's cockapoo, Pippa.
-										We create a professional, yet friendly experience every
-										time.
-									</p>
-								</div>
-								<ul className="grid gap-2">
-									<li className="flex items-center gap-2">
-										<ArrowRight className="h-4 w-4 text-primary" />
-										<span>
-											10+ years of experience in mulitple areas of design
-										</span>
-									</li>
-									<li className="flex items-center gap-2">
-										<ArrowRight className="h-4 w-4 text-primary" />
-										<span>Personalized approach to meeting your needs </span>
-									</li>
-									<li className="flex items-center gap-2">
-										<ArrowRight className="h-4 w-4 text-primary" />
-										<span>Friendly, engaging and enthusiastic</span>
-									</li>
-									<li className="flex items-center gap-2">
-										<ArrowRight className="h-4 w-4 text-primary" />
-										<span>
-											Focus on creating designs that drive business growth
-										</span>
-									</li>
-								</ul>
-								<div>
-									<Button asChild>
-										<Link href="/about">Meet Our Team</Link>
-									</Button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-
 				<section
 					id="pricing"
 					className="w-full py-12 md:py-24 lg:py-32 bg-muted/50"
