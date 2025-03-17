@@ -5,7 +5,6 @@ import Link from "next/link"
 import { useCart } from "@/app/context/cart"
 
 import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
 
 export default function CartPage() {
   const { state, dispatch } = useCart()

@@ -32,7 +32,13 @@ Features:
   }
 }
 
-export default function TemplateDetails({ params }: { params: { id: string } }) {
+interface PageProps {
+  params: {
+    id: string
+  }
+}
+
+export default function TemplatePage({ params }: PageProps) {
   const { dispatch } = useCart()
   const template = templateData[params.id as keyof typeof templateData]
   

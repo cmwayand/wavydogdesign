@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { NavigationMenu, NavigationMenuItem, NavigationMenuList, NavigationMenuLink, navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
-import { Button } from "@/components/ui/button";
 
 const SiteHeader = () => {
   return (
