@@ -205,7 +205,7 @@ export default function Home() {
 								</p>
 								<div className="pt-4 pb-8">
 									<Button size="lg" asChild>
-										<Link href="/packages">View Detailed Pricing</Link>
+										<Link href="/pricing">View Detailed Pricing</Link>
 									</Button>
 								</div>
 							</div>

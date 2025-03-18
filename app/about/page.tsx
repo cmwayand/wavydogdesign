@@ -52,7 +52,7 @@ export default function AboutPage() {
 								<p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
 									We are a dynamic trio with various skillsets and experience,
 									passionate about building products that make an impact and
-									solve problems.
+									solve problems for the greater good.
 								</p>
 							</div>
 						</div>
