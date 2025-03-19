@@ -13,8 +13,15 @@ import {
 
 import { Button } from "@/components/ui/button";
 import ContactForm from "@/components/ContactForm";
+import { MobileMenu } from "@/components/MobileMenu";
 
 export default function Home() {
+	const navLinks = [
+		{ href: "#services", label: "Services" },
+		{ href: "/about", label: "About" },
+		{ href: "#pricing", label: "Pricing" },
+	];
+
 	return (
 		<div className="flex min-h-screen flex-col">
 			<header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -57,6 +64,7 @@ export default function Home() {
 								Pricing
 							</Link>
 						</nav>
+						<MobileMenu links={navLinks} />
 						{/* Shop button - commented out for now
 						<Button asChild>
 							<Link href="/shop" rel="noopener noreferrer">
