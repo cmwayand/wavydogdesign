@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import { MobileMenu } from "@/components/MobileMenu";
+import { navLinks } from "@/constants/navigation";
 
 export default function AboutPage() {
 	return (
@@ -37,6 +39,7 @@ export default function AboutPage() {
 								Pricing
 							</Link>
 						</nav>
+						<MobileMenu links={navLinks} />
 					</div>
 				</div>
 			</header>

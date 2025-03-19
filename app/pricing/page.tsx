@@ -2,6 +2,8 @@ import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { MobileMenu } from "@/components/MobileMenu";
+import { navLinks } from "@/constants/navigation";
 
 export default function PricingPage() {
   return (
@@ -40,6 +42,7 @@ export default function PricingPage() {
                 Pricing
               </Link>
             </nav>
+            <MobileMenu links={navLinks} />
           </div>
         </div>
       </header>
