@@ -3,14 +3,9 @@ import Image from "next/image"
 import { ArrowLeft, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { MobileMenu } from "@/components/MobileMenu";
+import { navLinks } from "@/app/lib/navigation";
 
 export default function PricingPage() {
-  const navLinks = [
-    { href: "/#services", label: "Services" },
-    { href: "/about", label: "About" },
-    { href: "/#pricing", label: "Pricing" },
-  ];
-
   return (
     <div className="flex min-h-screen flex-col">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
