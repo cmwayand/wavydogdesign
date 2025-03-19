@@ -16,7 +16,7 @@ export default function ShopPage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Shop Navigation */}
-      <nav className="w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <nav className="w-full border-b bg-background">
         <div className="container flex h-14 items-center justify-between px-4 md:px-6">
           <Link href="/shop" className="font-semibold">
             Shop
