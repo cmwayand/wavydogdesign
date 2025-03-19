@@ -105,7 +105,7 @@ export default function Home() {
 
 				<section
 					id="services"
-					className="w-full py-8 md:py-16 lg:py-20 bg-muted"
+					className="w-full py-8 md:py-16 lg:py-20 bg-muted scroll-mt-16"
 				>
 					<div className="container px-4 md:px-6">
 						<div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -202,7 +202,7 @@ export default function Home() {
 
 				<section
 					id="pricing"
-					className="w-full py-12 md:py-24 lg:py-32 bg-muted/50"
+					className="w-full py-12 md:py-24 lg:py-32 bg-muted/50 scroll-mt-16"
 				>
 					<div className="container px-4 md:px-6">
 						<div className="flex flex-col items-center justify-center space-y-4 text-center">
