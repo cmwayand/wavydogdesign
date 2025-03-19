@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FlipCard } from "@/components/flip-card"
 import { MobileMenu } from "@/components/MobileMenu";
-import { navLinks } from "@/app/lib/navigation";
+import { navLinks } from "@/constants/navigation";
 
 export default function AboutPage() {
 	return (

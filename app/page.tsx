@@ -14,7 +14,7 @@ import {
 import { Button } from "@/components/ui/button";
 import ContactForm from "@/components/ContactForm";
 import { MobileMenu } from "@/components/MobileMenu";
-import { navLinks } from "@/app/lib/navigation";
+import { navLinks } from "@/constants/navigation";
 
 export default function Home() {
 	return (

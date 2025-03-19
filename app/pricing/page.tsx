@@ -3,7 +3,7 @@ import Image from "next/image"
 import { ArrowLeft, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { MobileMenu } from "@/components/MobileMenu";
-import { navLinks } from "@/app/lib/navigation";
+import { navLinks } from "@/constants/navigation";
 
 export default function PricingPage() {
   return (
