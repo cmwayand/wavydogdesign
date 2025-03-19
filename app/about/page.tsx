@@ -1,7 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
+import { MobileMenu } from "@/components/MobileMenu";
 
 export default function AboutPage() {
+	const navLinks = [
+		{ href: "/#services", label: "Services" },
+		{ href: "/about", label: "About" },
+		{ href: "/#pricing", label: "Pricing" },
+	];
+
 	return (
 		<div className="flex min-h-screen flex-col">
 			<header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -37,6 +44,7 @@ export default function AboutPage() {
 								Pricing
 							</Link>
 						</nav>
+						<MobileMenu links={navLinks} />
 					</div>
 				</div>
 			</header>

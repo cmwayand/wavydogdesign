@@ -5,8 +5,14 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { CartDisplay } from "@/components/cart-display"
+import { MobileMenu } from "@/components/MobileMenu";
 
 export default function ShopPage() {
+  const navLinks = [
+    { href: "/shop", label: "Shop" },
+    { href: "/shop/cart", label: "Cart" },
+  ];
+
   return (
     <div className="flex flex-col min-h-screen">
       {/* Shop Navigation */}
@@ -16,9 +22,10 @@ export default function ShopPage() {
             Shop
           </Link>
           <div className="flex items-center gap-4">
-            <Link href="/shop/cart">
+            <Link href="/shop/cart" className="hidden md:flex">
               <CartDisplay />
             </Link>
+            <MobileMenu links={navLinks} />
           </div>
         </div>
       </nav>
