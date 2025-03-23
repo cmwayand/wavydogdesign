@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 export default function CartPage() {
   const { state, dispatch } = useCart()
   const total = state.items.reduce((sum, item) => sum + item.price * item.quantity, 0)
-
+  
   return (
     <div className="flex min-h-screen flex-col">
       <nav className="w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
