@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { FlipCard } from "@/components/flip-card"
 
 export default function AboutPage() {
 	return (
@@ -24,6 +25,14 @@ export default function AboutPage() {
 							>
 								Services
 							</Link>
+							{/* Hidden for now
+							<Link
+								href="/work"
+								className="transition-colors hover:text-foreground/80"
+							>
+								Work
+							</Link>
+							*/}
 							<Link
 								href="/about"
 								className="transition-colors hover:text-foreground/80"
@@ -45,28 +54,21 @@ export default function AboutPage() {
 				<section className="w-full py-12 md:py-24 lg:py-32">
 					<div className="container px-4 md:px-6">
 						<div className="flex flex-col items-center justify-center space-y-4 text-center">
-							<div className="space-y-2 max-w-[900px]">
+							<div className="space-y-8 max-w-[1200px]">
 								<h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-									Meet our team
+									About
 								</h1>
-								<p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-									We are a dynamic trio with various skillsets and experience,
-									passionate about building products that make an impact and
-									solve problems for the greater good.
-								</p>
 							</div>
 						</div>
 
+						{/* Team Section */}
 						<div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
 							<div className="flex flex-col items-center space-y-4">
-								<div className="relative w-48 h-48 rounded-full overflow-hidden">
-									<Image
-										src="/claire.png"
-										alt="Claire Wayand"
-										fill
-										className="object-cover"
-									/>
-								</div>
+								<FlipCard
+									frontImage="/claire.png"
+									backImage="/claireback.png"
+									alt="Claire Wayand"
+								/>
 								<div className="text-center">
 									<h3 className="text-xl font-bold">Claire Wayand</h3>
 									<p className="text-muted-foreground">
@@ -81,14 +83,11 @@ export default function AboutPage() {
 							</div>
 
 							<div className="flex flex-col items-center space-y-4">
-								<div className="relative w-48 h-48 rounded-full overflow-hidden">
-									<Image
-										src="/corbin.png"
-										alt="Corbin Kems"
-										fill
-										className="object-cover"
-									/>
-								</div>
+								<FlipCard
+									frontImage="/corbin.png"
+									backImage="/corbinback.png"
+									alt="Corbin Kems"
+								/>
 								<div className="text-center">
 									<h3 className="text-xl font-bold">Corbin Kems</h3>
 									<p className="text-muted-foreground">Senior Developer</p>
@@ -101,14 +100,11 @@ export default function AboutPage() {
 							</div>
 
 							<div className="flex flex-col items-center space-y-4">
-								<div className="relative w-48 h-48 rounded-full overflow-hidden">
-									<Image
-										src="/alborz.png"
-										alt="Alborz"
-										fill
-										className="object-cover"
-									/>
-								</div>
+								<FlipCard
+									frontImage="/alborz.png"
+									backImage="/placeholder-fun.jpg"
+									alt="Alborz"
+								/>
 								<div className="text-center">
 									<h3 className="text-xl font-bold">Alborz Mesbahi</h3>
 									<p className="text-muted-foreground">Senior Developer</p>
@@ -119,6 +115,34 @@ export default function AboutPage() {
 									</p>
 								</div>
 							</div>
+						</div>
+
+						{/* Detailed About Section */}
+						<div className="mx-auto max-w-[1000px] text-muted-foreground text-sm md:text-base leading-relaxed space-y-6 mt-24">
+							<p>
+								We are Wavy Dog Design, a dynamic team of seasoned professionals dedicated to transforming your digital vision into reality. With a combined experience of over 10 years in design and development, we offer a comprehensive suite of services to power your online success.
+							</p>
+
+							<p>
+								Our design expertise spans 8 years of graphic design, honing our ability to create visually stunning and impactful brand identities, marketing materials, and digital assets. This foundation seamlessly transitions into 4 years of specialized product design, where we focus on crafting intuitive and user-centered experiences that drive engagement and achieve business goals. We specialize in UX/UI design, ensuring that every interaction is seamless and delightful.
+							</p>
+
+							<p>
+								Our development team brings 8 years of deep expertise in modern web technologies, specializing in NodeJS and React. We excel in building robust, scalable, and high-performance SaaS products, web applications, and websites. Our proficiency extends to API development, database management, and cloud-based solutions, ensuring your project is built on a solid technical foundation.
+							</p>
+
+							<ul className="space-y-2 list-none">
+								<li><strong>Comprehensive Skillset:</strong> We offer a full spectrum of services, from initial concept and design to development, deployment, and marketing.</li>
+								<li><strong>Efficient Team:</strong> Our streamlined process and collaborative approach ensure fast and efficient project delivery.</li>
+								<li><strong>Proven Expertise:</strong> Our collective experience and portfolio demonstrate our ability to deliver high-quality, impactful results.</li>
+								<li><strong>Client-Centric Approach:</strong> We prioritize clear communication, transparency, and a deep understanding of your business objectives.</li>
+								<li><strong>Modern Technologies:</strong> We utilize the latest tools and technologies, including NodeJS, React, and AI-powered solutions.</li>
+								<li><strong>SaaS and Social Management Expertise:</strong> We have experience building and managing SaaS products, and social media management tools.</li>
+							</ul>
+
+							<p>
+								Whether you're looking to build a groundbreaking SaaS product, enhance your social media presence, redesign your website, or develop a custom application, we have the expertise and dedication to bring your vision to life. Let's collaborate and create something extraordinary.
+							</p>
 						</div>
 					</div>
 				</section>

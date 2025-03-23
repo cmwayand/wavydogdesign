@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowRight } from "lucide-react"
+import { ArrowLeft, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export default function PricingPage() {
@@ -45,6 +45,15 @@ export default function PricingPage() {
       </header>
       
       <main className="flex-1">
+        <div className="container px-4 md:px-6 py-6">
+          <Button variant="ghost" size="sm" asChild className="mb-8">
+            <Link href="/#pricing" className="flex items-center">
+              <ArrowLeft className="mr-2 h-4 w-4" />
+              Back to Overview
+            </Link>
+          </Button>
+        </div>
+
         <section className="w-full py-12 md:py-24">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
