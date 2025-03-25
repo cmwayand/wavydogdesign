@@ -112,7 +112,7 @@ export default function AboutPage() {
 									<h3 className="text-xl font-bold">Alborz Mesbahi</h3>
 									<p className="text-muted-foreground">Senior Developer</p>
 									<p className="mt-2 text-sm">
-										Alborz brings 8+ years of experience to our team and is
+										Alborz brings over a decade of experience to our team and is
 										fascinated by AI and new technologies. He guides our
 										practices to make sure code health is clean and functional.
 									</p>
