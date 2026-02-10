@@ -61,120 +61,70 @@ export default function CoreHealthPage() {
 								<span className="text-sm font-semibold text-primary mb-4 block">
 									Optimizing Online Presence and Scaling Clients
 								</span>
-								<h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-6">
+								<h1 className="font-display text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl mb-6">
 									Core Health
 								</h1>
 								<p className="text-xl text-muted-foreground leading-relaxed">
 									Comprehensive strategy for optimizing online presence and scaling client growth. 
-									Developed website optimization, brand positioning, and growth strategies that 
-									significantly increased their digital footprint and client acquisition.
+									We will develop website optimization, brand positioning, and growth strategies to 
+									significantly increase their digital footprint and client acquisition.
 								</p>
-							</div>
-
-							{/* Before and After Website Section */}
-							<div className="mb-16 space-y-8">
-								<div className="text-center mb-8">
-									<h2 className="text-2xl font-bold mb-2">Website Transformation</h2>
-									<p className="text-muted-foreground">Before & After</p>
-								</div>
-								<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-									<div className="space-y-3">
-										<h3 className="text-lg font-semibold text-muted-foreground">BEFORE</h3>
-										<div className="relative aspect-video rounded-2xl overflow-hidden border border-border/50 bg-muted/20">
-											<Image
-												src="/headerimage2.png"
-												alt="Core Health - Before"
-												fill
-												className="object-cover"
-											/>
-										</div>
-									</div>
-									<div className="space-y-3">
-										<h3 className="text-lg font-semibold text-primary">AFTER</h3>
-										<div className="relative aspect-video rounded-2xl overflow-hidden border border-primary/30 bg-muted/20">
-											<Image
-												src="/corehealth.png"
-												alt="Core Health - After"
-												fill
-												className="object-cover"
-											/>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							{/* Logo and Branding Section */}
-							<div className="mb-16 space-y-8">
-								<div className="text-center mb-8">
-									<h2 className="text-2xl font-bold mb-2">Logo & Branding Redesign</h2>
-									<p className="text-muted-foreground">Improved visual identity</p>
-								</div>
-								<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-									<div className="space-y-3">
-										<h3 className="text-lg font-semibold text-muted-foreground">BEFORE</h3>
-										<div className="relative aspect-square rounded-2xl overflow-hidden border border-border/50 bg-muted/20 flex items-center justify-center">
-											<div className="text-center p-8">
-												<div className="w-32 h-32 mx-auto mb-4 rounded-lg bg-gradient-to-br from-slate-700 to-slate-800 border border-border/50 flex items-center justify-center">
-													<span className="text-2xl font-bold text-slate-400">CH</span>
-												</div>
-												<p className="text-sm text-muted-foreground">Old Logo</p>
-											</div>
-										</div>
-									</div>
-									<div className="space-y-3">
-										<h3 className="text-lg font-semibold text-primary">AFTER</h3>
-										<div className="relative aspect-square rounded-2xl overflow-hidden border border-primary/30 bg-muted/20 flex items-center justify-center">
-											<div className="text-center p-8">
-												<div className="w-32 h-32 mx-auto mb-4 rounded-lg bg-gradient-to-br from-primary/20 to-purple-500/20 border-2 border-primary/30 flex items-center justify-center">
-													<span className="text-2xl font-bold bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent">CH</span>
-												</div>
-												<p className="text-sm text-muted-foreground">New Logo</p>
-											</div>
-										</div>
-									</div>
-								</div>
 							</div>
 
 							<div className="prose prose-invert max-w-none space-y-6">
 								<div>
-									<h2 className="text-2xl font-bold mb-4">Project Overview</h2>
+									<h2 className="font-display text-2xl font-bold mb-4">What the Client Wanted</h2>
 									<p className="text-muted-foreground leading-relaxed">
-										Core Health needed to optimize their online presence and scale their client 
-										base. We worked with them to develop a comprehensive strategy that improved 
+										Core Health needed to increase awareness and bookings for their thermography services. 
+										They wanted to grow their niche revenue streams by reaching more potential patients 
+										interested in thermography and establishing their practice as a trusted provider in 
+										this specialized field. The goal was to drive a surge in thermography patients 
+										through targeted digital marketing and improved online presence.
+									</p>
+								</div>
+
+								<div>
+									<h2 className="font-display text-2xl font-bold mb-4">Project Overview</h2>
+									<p className="text-muted-foreground leading-relaxed">
+										Core Health needs to optimize their online presence and scale their client 
+										base. We will work with them to develop a comprehensive strategy that will improve 
 										their website performance, brand positioning, and overall digital presence 
 										to attract and convert more clients.
 									</p>
 								</div>
 
 								<div>
-									<h2 className="text-2xl font-bold mb-4">Services Provided</h2>
+									<h2 className="font-display text-2xl font-bold mb-4">Services to be Provided</h2>
 									<ul className="space-y-3 text-muted-foreground">
 										<li className="flex items-start gap-3">
 											<span className="text-primary font-bold mt-1">•</span>
-											<span><strong className="text-foreground">Website Optimization:</strong> Improved site performance, user experience, and conversion rates through strategic design and development updates.</span>
+											<span><strong className="text-foreground">Website Optimization:</strong> Will improve site performance, user experience, and conversion rates through strategic design and development updates.</span>
 										</li>
 										<li className="flex items-start gap-3">
 											<span className="text-primary font-bold mt-1">•</span>
-											<span><strong className="text-foreground">Brand Positioning:</strong> Developed a clear brand positioning strategy that differentiates them in the health and wellness market.</span>
+											<span><strong className="text-foreground">Brand Positioning:</strong> Will develop a clear brand positioning strategy that differentiates them in the health and wellness market.</span>
 										</li>
 										<li className="flex items-start gap-3">
 											<span className="text-primary font-bold mt-1">•</span>
-											<span><strong className="text-foreground">Growth Strategy:</strong> Created comprehensive growth strategies focused on client acquisition and retention.</span>
+											<span><strong className="text-foreground">Growth Strategy:</strong> Will create comprehensive growth strategies focused on client acquisition and retention.</span>
 										</li>
 										<li className="flex items-start gap-3">
 											<span className="text-primary font-bold mt-1">•</span>
-											<span><strong className="text-foreground">Digital Presence Enhancement:</strong> Improved their overall digital footprint across multiple platforms and channels.</span>
+											<span><strong className="text-foreground">Digital Presence Enhancement:</strong> Will improve their overall digital footprint across multiple platforms and channels.</span>
 										</li>
 									</ul>
 								</div>
 
 								<div>
-									<h2 className="text-2xl font-bold mb-4">Results</h2>
+									<h2 className="font-display text-2xl font-bold mb-4">Expected Results</h2>
 									<p className="text-muted-foreground leading-relaxed">
-										Through our optimization and scaling strategy, Core Health saw a significant 
+										Through our optimization and scaling strategy, we expect Core Health to see a significant 
 										increase in their digital footprint and client acquisition. The improved 
-										website performance and brand positioning helped them attract more qualified 
+										website performance and brand positioning will help them attract more qualified 
 										leads and convert them into long-term clients.
+									</p>
+									<p className="text-primary font-display text-lg font-semibold mt-4">
+										Coming soon!
 									</p>
 								</div>
 							</div>

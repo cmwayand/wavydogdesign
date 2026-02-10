@@ -39,35 +39,30 @@ const testimonials = [
 		content: "I did not know that I needed to update my branding and website, but Claire exceeded my expectations and delivered the best solution!",
 		rating: 5,
 	},
-	{
-		name: "Sarah Johnson",
-		role: "CEO, TechStart",
-		content: "Working with Wavy Dog Design transformed our brand. Their attention to detail and creative solutions exceeded our expectations.",
-		rating: 5,
-	},
 ];
 
 const portfolioProjects = [
 	{
 		title: "Henleys Orchard",
-		description: "Drove growth and increased revenue for Henley's Orchard via strategic social media management, custom ad design, and data-driven content mapping.",
+		description: "Drove increase in page views, wedding bookings, and improved social media following and engagement.",
 		image: "/henleysorchard.png",
 		category: "Marketing and Growth",
 		slug: "henleys-orchard",
 	},
 	{
 		title: "Core Health",
-		description: "Drove a surge in thermography patients for Core Health through a targeted digital overhaul. By redesigning the logo and launching strategic ad campaigns, I increased brand awareness and scaled niche revenue streams as a foundation for total business expansion.",
+		description: "Increasing thermography bookings and awareness through website optimization, brand positioning, and growth strategies.",
 		image: "/corehealth.png",
 		category: "Optimizing Online Presence and Scaling Clients",
 		slug: "core-health",
 	},
 	{
 		title: "Hamilton Legal Services",
-		description: "Complete brand identity and website design for a legal services firm. Developed a professional, trustworthy brand that reflects their expertise and helps them connect with clients effectively.",
+		description: "Complete brand identity and website design for a legal services firm.",
 		image: "/hamiltonnew.png",
 		category: "Branding and Web Design",
 		slug: "hamilton-legal",
+		comingSoon: true,
 	},
 ];
 
@@ -163,7 +158,7 @@ export default function Home() {
 										Web Design & Branding Agency
 									</span>
 								</div>
-								<h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl leading-tight">
+								<h1 className="font-hero text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl leading-tight">
 									<span className="block text-white">Scaling Businesses Through</span>
 									<span className="block bg-gradient-to-r from-primary via-purple-400 to-primary bg-clip-text text-transparent animate-gradient">
 										Beautiful Web Design
@@ -175,13 +170,13 @@ export default function Home() {
 									Fully custom websites and brand identities that help you scale and connect with your audience.
 								</p>
 								<div className="flex flex-col gap-4 min-[400px]:flex-row mt-2">
-									<Button size="lg" className="bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/50 hover:shadow-xl hover:shadow-primary/50 transition-all" asChild>
+									<Button size="lg" className="font-display bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/50 hover:shadow-xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105" asChild>
 										<Link href="#contact" className="flex items-center gap-2">
 											Start Your Project
 											<ArrowRight className="w-4 h-4" />
 										</Link>
 									</Button>
-									<Button size="lg" variant="outline" className="border-2 border-white/20 bg-white/5 backdrop-blur-sm text-white hover:bg-white/10 hover:border-white/30" asChild>
+									<Button size="lg" variant="outline" className="font-display border-2 border-white/20 bg-white/5 backdrop-blur-sm text-white hover:bg-white/10 hover:border-white/30 transition-all duration-300 hover:scale-105" asChild>
 										<Link href="/about">Learn More</Link>
 									</Button>
 								</div>
@@ -189,35 +184,21 @@ export default function Home() {
 
 							{/* Right visual - Animated portfolio showcase */}
 							<div className="relative flex justify-center lg:justify-end items-center z-10">
-								<div className="relative w-full max-w-[600px]">
+								<div className="relative w-full max-w-[900px]">
 									{/* Glowing backdrop effect */}
 									<div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-purple-500/20 to-blue-500/20 rounded-3xl blur-3xl scale-110 animate-pulse"></div>
 									
-									{/* Animated image carousel */}
-									<div className="relative rounded-3xl overflow-hidden border border-white/10 bg-gradient-to-br from-white/5 to-white/0 backdrop-blur-sm p-2 shadow-2xl">
-										<div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900 aspect-square">
-											{/* Hamilton Legal - First image */}
-											<div className="absolute inset-0 animate-fade-in-out">
-												<Image
-													src="/hamiltonnew.png"
-													alt="Hamilton Legal Services"
-													fill
-													className="object-cover"
-													priority
-													quality={100}
-												/>
-											</div>
-											{/* Henleys Orchard - Second image */}
-											<div className="absolute inset-0 animate-fade-in-out-delayed">
-												<Image
-													src="/henleysorchard.png"
-													alt="Henleys Orchard"
-													fill
-													className="object-cover"
-													quality={100}
-												/>
-											</div>
-										</div>
+									{/* Hero image */}
+									<div className="relative rounded-2xl overflow-hidden">
+										<Image
+											src="/headerimage.png"
+											alt="Wavy Dog Design"
+											width={900}
+											height={600}
+											className="object-cover w-full h-auto"
+											priority
+											quality={100}
+										/>
 									</div>
 
 									{/* Floating decorative elements with gradients */}
@@ -242,7 +223,7 @@ export default function Home() {
 					<div className="container px-4 md:px-6 relative z-10">
 						<div className="flex flex-col items-center justify-center space-y-4 text-center">
 							<div className="space-y-2">
-								<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+								<h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
 									Our Services
 								</h2>
 								<p className="max-w-[700px] text-muted-foreground md:text-xl">
@@ -252,11 +233,11 @@ export default function Home() {
 							</div>
 						</div>
 						<div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 py-12 md:grid-cols-2 lg:grid-cols-3">
-							<div className="flex flex-col items-center space-y-2 rounded-lg border border-border/50 bg-gradient-to-br from-card via-card/95 to-card p-6 shadow-sm hover:border-primary/20 hover:shadow-md transition-all">
+							<div className="flex flex-col items-center space-y-2 rounded-xl border border-border/50 bg-gradient-to-br from-card via-card/95 to-card p-6 shadow-sm hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1 transition-all duration-300">
 								<div className="rounded-full bg-gradient-to-br from-primary/10 to-blue-500/10 p-3">
 									<Globe className="h-6 w-6 text-primary" />
 								</div>
-								<h3 className="text-xl font-bold">Website Design & Updates</h3>
+								<h3 className="font-display text-xl font-semibold">Website Design & Updates</h3>
 								<p className="text-center text-muted-foreground">
 									Modern, responsive websites that convert visitors into
 									customers
@@ -266,7 +247,7 @@ export default function Home() {
 								<div className="rounded-full bg-gradient-to-br from-primary/10 to-purple-500/10 p-3">
 									<PenTool className="h-6 w-6 text-primary" />
 								</div>
-								<h3 className="text-xl font-bold">Branding & Logo Design</h3>
+								<h3 className="font-display text-xl font-semibold">Branding & Logo Design</h3>
 								<p className="text-center text-muted-foreground">
 									Distinctive visual identities that make your brand memorable
 								</p>
@@ -275,16 +256,16 @@ export default function Home() {
 								<div className="rounded-full bg-gradient-to-br from-blue-500/10 to-primary/10 p-3">
 									<MessageSquare className="h-6 w-6 text-primary" />
 								</div>
-								<h3 className="text-xl font-bold">Social Media Management</h3>
+								<h3 className="font-display text-xl font-semibold">Social Media Management</h3>
 								<p className="text-center text-muted-foreground">
 									Engaging content and strategy to grow your online presence
 								</p>
 							</div>
-							<div className="flex flex-col items-center space-y-2 rounded-lg border border-border/50 bg-gradient-to-br from-card via-card/95 to-card p-6 shadow-sm hover:border-primary/20 hover:shadow-md transition-all">
+							<div className="flex flex-col items-center space-y-2 rounded-xl border border-border/50 bg-gradient-to-br from-card via-card/95 to-card p-6 shadow-sm hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1 transition-all duration-300">
 								<div className="rounded-full bg-gradient-to-br from-primary/10 to-blue-500/10 p-3">
 									<Palette className="h-6 w-6 text-primary" />
 								</div>
-								<h3 className="text-xl font-bold">Marketing Materials</h3>
+								<h3 className="font-display text-xl font-semibold">Marketing Materials</h3>
 								<p className="text-center text-muted-foreground">
 									Eye-catching print and digital collateral that drives results
 								</p>
@@ -293,7 +274,7 @@ export default function Home() {
 								<div className="rounded-full bg-gradient-to-br from-purple-500/10 to-primary/10 p-3">
 									<ArrowRight className="h-6 w-6 text-primary" />
 								</div>
-								<h3 className="text-xl font-bold">Marketing Strategy</h3>
+								<h3 className="font-display text-xl font-semibold">Marketing Strategy</h3>
 								<p className="text-center text-muted-foreground">
 									Data-driven approaches to reach your target audience
 									effectively
@@ -303,7 +284,7 @@ export default function Home() {
 								<div className="rounded-full bg-gradient-to-br from-blue-500/10 to-purple-500/10 p-3">
 									<Globe className="h-6 w-6 text-primary" />
 								</div>
-								<h3 className="text-xl font-bold">Custom Solutions</h3>
+								<h3 className="font-display text-xl font-semibold">Custom Solutions</h3>
 								<p className="text-center text-muted-foreground">
 									Tailored design and marketing services for your specific needs
 								</p>
@@ -319,7 +300,7 @@ export default function Home() {
 					<div className="container px-4 md:px-6 relative z-10">
 						<div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
 							<div className="space-y-2">
-								<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+								<h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
 									Results That Speak
 								</h2>
 								<p className="max-w-[700px] text-muted-foreground md:text-xl">
@@ -328,11 +309,11 @@ export default function Home() {
 							</div>
 						</div>
 						<div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-							<div className="flex flex-col items-center text-center p-6 rounded-2xl border border-border/50 bg-gradient-to-br from-card/50 via-card/40 to-card/50 backdrop-blur-sm hover:border-primary/30 transition-all">
-								<div className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-primary via-blue-400 to-primary bg-clip-text text-transparent mb-2">
+							<div className="flex flex-col items-center text-center p-6 rounded-2xl border border-border/50 bg-gradient-to-br from-card/50 via-card/40 to-card/50 backdrop-blur-sm hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1 transition-all duration-300">
+								<div className="font-display text-5xl md:text-6xl font-bold bg-gradient-to-r from-primary via-blue-400 to-primary bg-clip-text text-transparent mb-2">
 									10+
 								</div>
-								<h3 className="text-xl font-semibold mb-2">Clients Helped</h3>
+								<h3 className="font-display text-xl font-semibold mb-2">Clients Helped</h3>
 								<p className="text-muted-foreground text-sm">
 									Successful projects delivered
 								</p>
@@ -341,7 +322,7 @@ export default function Home() {
 								<div className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-primary to-purple-400 bg-clip-text text-transparent mb-2">
 									900+
 								</div>
-								<h3 className="text-xl font-semibold mb-2">Total Followers Gained</h3>
+								<h3 className="font-display text-xl font-semibold mb-2">Total Followers Gained</h3>
 								<p className="text-muted-foreground text-sm">
 									For our clients across platforms
 								</p>
@@ -350,7 +331,7 @@ export default function Home() {
 								<div className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-primary to-purple-400 bg-clip-text text-transparent mb-2">
 									+46%
 								</div>
-								<h3 className="text-xl font-semibold mb-2">Engagement Increase</h3>
+								<h3 className="font-display text-xl font-semibold mb-2">Engagement Increase</h3>
 								<p className="text-muted-foreground text-sm">
 									Average engagement growth
 								</p>
@@ -369,7 +350,7 @@ export default function Home() {
 						<div className="mb-20">
 							<div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
 								<div className="space-y-2">
-									<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+									<h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
 										Our Work
 									</h2>
 									<p className="max-w-[700px] text-muted-foreground md:text-xl">
@@ -379,32 +360,68 @@ export default function Home() {
 							</div>
 
 							<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-								{portfolioProjects.map((project, index) => (
-									<Link
-										key={index}
-										href={`/projects/${project.slug}`}
-										className="group relative overflow-hidden rounded-2xl border border-border/50 bg-card hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 block"
-									>
-										<div className="relative aspect-video overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900">
-											<Image
-												src={project.image}
-												alt={project.title}
-												fill
-												className="object-cover group-hover:scale-105 transition-transform duration-500"
-											/>
-											<div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-										</div>
-										<div className="p-6">
-											<span className="text-xs font-semibold text-primary mb-2 block">
-												{project.category}
-											</span>
-											<h3 className="text-xl font-bold mb-2">{project.title}</h3>
-											<p className="text-muted-foreground text-sm leading-relaxed">
-												{project.description}
-											</p>
-										</div>
-									</Link>
-								))}
+								{portfolioProjects.map((project, index) => {
+									const isComingSoon = (project as any).comingSoon;
+									
+									if (isComingSoon) {
+										return (
+											<div
+												key={index}
+												className="group relative overflow-hidden rounded-2xl border border-border/50 bg-card opacity-75 transition-all duration-300"
+											>
+												<div className="relative aspect-video overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900">
+													<Image
+														src={project.image}
+														alt={project.title}
+														fill
+														className="object-cover"
+													/>
+													<div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+														<span className="text-2xl font-display font-bold text-white bg-primary/80 px-6 py-3 rounded-lg">
+															Coming Soon
+														</span>
+													</div>
+												</div>
+												<div className="p-6">
+													<span className="text-xs font-semibold text-primary mb-2 block">
+														{project.category}
+													</span>
+													<h3 className="font-display text-xl font-semibold mb-2">{project.title}</h3>
+													<p className="text-muted-foreground text-sm leading-relaxed">
+														{project.description}
+													</p>
+												</div>
+											</div>
+										);
+									}
+									
+									return (
+										<Link
+											key={index}
+											href={`/projects/${project.slug}`}
+											className="group relative overflow-hidden rounded-2xl border border-border/50 bg-card hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1 block"
+										>
+											<div className="relative aspect-video overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900">
+												<Image
+													src={project.image}
+													alt={project.title}
+													fill
+													className="object-cover group-hover:scale-105 transition-transform duration-500"
+												/>
+												<div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+											</div>
+											<div className="p-6">
+												<span className="text-xs font-semibold text-primary mb-2 block">
+													{project.category}
+												</span>
+												<h3 className="font-display text-xl font-semibold mb-2">{project.title}</h3>
+												<p className="text-muted-foreground text-sm leading-relaxed">
+													{project.description}
+												</p>
+											</div>
+										</Link>
+									);
+								})}
 							</div>
 						</div>
 
@@ -412,7 +429,7 @@ export default function Home() {
 						<div className="relative">
 							<div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
 								<div className="space-y-2">
-									<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+									<h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
 										Happy Clients
 									</h2>
 									<p className="max-w-[700px] text-muted-foreground md:text-xl">
@@ -611,7 +628,7 @@ export default function Home() {
 					<div className="container px-4 md:px-6">
 						<div className="flex flex-col items-center justify-center space-y-4 text-center">
 							<div className="space-y-2">
-								<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+								<h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
 									Get in Touch
 								</h2>
 								<p className="max-w-[700px] text-muted-foreground md:text-xl">
@@ -623,7 +640,7 @@ export default function Home() {
 						<div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 py-12 lg:grid-cols-2">
 							<div className="flex flex-col space-y-4">
 								<div className="space-y-2">
-									<h3 className="text-xl font-bold">Contact Information</h3>
+									<h3 className="font-display text-xl font-semibold">Contact Information</h3>
 									<p className="text-muted-foreground">
 										Please reach out, we'd love to hear from you!
 									</p>
@@ -631,7 +648,7 @@ export default function Home() {
 								<div className="space-y-2">
 									<p className="flex items-center gap-2">
 										<MessageSquare className="h-4 w-4 text-primary" />
-										<span>cmwayand@gmail.com</span>
+										<span>claire@wavydogdesign.com</span>
 									</p>
 								</div>
 								<div className="flex space-x-4">

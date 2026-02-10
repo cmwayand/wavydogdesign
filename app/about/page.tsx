@@ -58,7 +58,7 @@ export default function AboutPage() {
 					<div className="container px-4 md:px-6">
 						{/* Hero Section */}
 						<div className="flex flex-col items-center justify-center space-y-8 text-center mb-20">
-							<h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
+							<h1 className="font-display text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
 								About Wavy Dog Design
 							</h1>
 							<p className="max-w-2xl text-lg md:text-xl text-muted-foreground">
@@ -77,20 +77,14 @@ export default function AboutPage() {
 									/>
 								</div>
 								<div className="flex-1 text-center md:text-left">
-									<h2 className="text-3xl font-bold mb-3">Claire Wayand</h2>
-									<p className="text-lg text-primary mb-4">Founder & Creative Director</p>
-									<p className="text-muted-foreground leading-relaxed mb-4">
-										With over a decade of experience in design and branding, Claire leads 
-										Wavy Dog Design with a passion for creating stunning websites and 
+									<h2 className="font-display text-3xl font-bold mb-3">Claire Wayand</h2>
+									<p className="text-lg text-primary mb-4">UX/UI, Web and Product Expert</p>
+									<p className="text-muted-foreground leading-relaxed">
+										With 8 years in graphic design and 5 years in UX/UI product and marketing, 
+										Claire leads Wavy Dog Design with a passion for creating stunning websites and 
 										compelling brand identities. Her expertise spans from initial concept 
 										development to final implementation, ensuring every project reflects 
-										your unique vision.
-									</p>
-									<p className="text-muted-foreground leading-relaxed">
-										Claire works directly with clients, providing a personal and collaborative 
-										experience. She specializes in modern web design, brand identity development, 
-										and creating digital experiences that not only look beautiful but also 
-										drive results.
+										your unique vision and drives results.
 									</p>
 								</div>
 							</div>
@@ -107,8 +101,8 @@ export default function AboutPage() {
 									/>
 								</div>
 								<div className="flex-1 text-center md:text-left">
-									<h2 className="text-3xl font-bold mb-3">Lisa Wayand</h2>
-									<p className="text-lg text-primary mb-4">Art Direction and Customer Experience</p>
+									<h2 className="font-display text-3xl font-bold mb-3">Lisa Wayand</h2>
+									<p className="text-lg text-primary mb-4">Art Director, Space Planner, Branding and Print Production</p>
 									<p className="text-muted-foreground leading-relaxed mb-4">
 										Lisa brings expertise in art direction and customer experience design to 
 										Wavy Dog Design. She focuses on creating cohesive visual narratives and 
@@ -124,55 +118,11 @@ export default function AboutPage() {
 							</div>
 						</div>
 
-						{/* Team Members Section */}
-						<div className="max-w-4xl mx-auto mb-20">
-							<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-								{/* App Designer */}
-								<div className="flex flex-col items-center text-center">
-									<div className="relative w-32 h-32 mb-4 rounded-full overflow-hidden border-2 border-primary/30">
-										<Image
-											src="/vonabout.png"
-											alt="App Designer"
-											fill
-											className="object-cover"
-										/>
-									</div>
-									<h3 className="text-lg font-bold mb-1">App Designer</h3>
-									<p className="text-xs text-muted-foreground mb-2">
-										Contractor
-									</p>
-									<p className="text-xs text-muted-foreground leading-relaxed max-w-xs">
-										A talented app designer who sometimes helps with projects, bringing 
-										mobile and web application design expertise to our team.
-									</p>
-								</div>
-
-								{/* Developer */}
-								<div className="flex flex-col items-center text-center">
-									<div className="relative w-32 h-32 mb-4 rounded-full overflow-hidden border-2 border-primary/30">
-										<Image
-											src="/brandonabout.png"
-											alt="Developer"
-											fill
-											className="object-cover"
-										/>
-									</div>
-									<h3 className="text-lg font-bold mb-1">Developer</h3>
-									<p className="text-xs text-muted-foreground mb-2">
-										Contractor
-									</p>
-									<p className="text-xs text-muted-foreground leading-relaxed max-w-xs">
-										A skilled developer who sometimes helps with projects, bringing 
-										designs to life with clean, efficient code and modern technologies.
-									</p>
-								</div>
-							</div>
-						</div>
 
 						{/* Services Focus Section */}
 						<div className="max-w-[1000px] mx-auto space-y-8">
 							<div className="text-center mb-12">
-								<h2 className="text-3xl font-bold mb-4">What We Do</h2>
+								<h2 className="font-display text-3xl font-bold mb-4">What We Do</h2>
 								<p className="text-lg text-muted-foreground max-w-2xl mx-auto">
 									We specialize in creating exceptional websites and building strong brand identities 
 									that help businesses stand out and connect with their audience.
@@ -181,21 +131,17 @@ export default function AboutPage() {
 
 							<div className="grid md:grid-cols-2 gap-8 mb-12">
 								<div className="p-6 rounded-lg border bg-card">
-									<h3 className="text-xl font-bold mb-3">Website Design & Development</h3>
+									<h3 className="font-display text-xl font-semibold mb-3">Website Design & Development</h3>
 									<p className="text-muted-foreground leading-relaxed">
-										We create modern, responsive websites that are not only visually stunning 
-										but also optimized for performance and user experience. From simple business 
-										websites to complex web applications, we build solutions that work seamlessly 
-										across all devices and platforms.
+										Modern, responsive websites optimized for performance and user experience. 
+										From simple business sites to complex web applications.
 									</p>
 								</div>
 								<div className="p-6 rounded-lg border bg-card">
-									<h3 className="text-xl font-bold mb-3">Brand Identity & Logo Design</h3>
+									<h3 className="font-display text-xl font-semibold mb-3">Brand Identity & Logo Design</h3>
 									<p className="text-muted-foreground leading-relaxed">
-										Your brand is your story. We help you craft a distinctive visual identity 
-										that captures your essence and resonates with your target audience. From logo 
-										design to complete brand guidelines, we create cohesive brand experiences that 
-										make a lasting impression.
+										Distinctive visual identities that capture your essence and resonate with your audience. 
+										From logo design to complete brand guidelines.
 									</p>
 								</div>
 							</div>
@@ -203,38 +149,14 @@ export default function AboutPage() {
 							{/* Detailed About Section */}
 							<div className="prose prose-invert max-w-none space-y-6">
 								<div>
-									<h3 className="text-2xl font-bold mb-4">Our Approach</h3>
+									<h3 className="font-display text-2xl font-bold mb-4">Design Expertise</h3>
 									<p className="text-muted-foreground leading-relaxed">
-										At Wavy Dog Design, we believe that great design starts with understanding your 
-										business, your goals, and your audience. With over 10 years of combined experience 
-										in design and development, we bring a unique blend of creative vision and technical 
-										expertise to every project.
-									</p>
-								</div>
-
-								<div>
-									<h3 className="text-2xl font-bold mb-4">Design Expertise</h3>
-									<p className="text-muted-foreground leading-relaxed">
-										Our design expertise spans 8 years of graphic design, honing our ability to create 
-										visually stunning and impactful brand identities, marketing materials, and digital 
-										assets. This foundation seamlessly transitions into specialized product and web design, 
-										where we focus on crafting intuitive and user-centered experiences that drive 
-										engagement and achieve business goals.
-									</p>
-								</div>
-
-								<div>
-									<h3 className="text-2xl font-bold mb-4">Development Excellence</h3>
-									<p className="text-muted-foreground leading-relaxed">
-										We utilize modern web technologies and best practices to build robust, scalable, and 
-										high-performance websites. Our proficiency extends to responsive design, performance 
-										optimization, and ensuring your website is built on a solid technical foundation 
-										that will grow with your business.
+										Lisa and Claire combine decades of complementary design experience to deliver the full creative package. Claire brings 8 years in graphic design and 5 years in UX/UI product and marketing, with deep expertise in B2B SaaS, startup app development, and marketing-driven design that turns strategy into results. Lisa adds 20+ years of mastery in print production, publishing, and layout, with an expert eye as an art director and space planner. Together, they seamlessly unite digital and print—creating complete brand systems, from logos and websites to books, documents, business cards, posters, and launch-ready assets. One team. Total brand execution. Built to bring your business to life.
 									</p>
 								</div>
 
 								<div className="bg-card border rounded-lg p-6 mt-8">
-									<h3 className="text-xl font-bold mb-4">Why Work With Us</h3>
+									<h3 className="font-display text-xl font-semibold mb-4">Why Work With Us</h3>
 									<ul className="space-y-3 text-muted-foreground">
 										<li className="flex items-start gap-3">
 											<span className="text-primary font-bold mt-1">•</span>

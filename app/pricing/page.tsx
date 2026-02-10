@@ -61,7 +61,7 @@ export default function PricingPage() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">Our Services & Pricing</h1>
+                <h1 className="font-display text-3xl font-bold tracking-tight sm:text-5xl">Our Services & Pricing</h1>
                 <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
                   Transparent pricing for our core services. All packages can be customized to meet your specific needs.
                 </p>
@@ -69,9 +69,9 @@ export default function PricingPage() {
             </div>
 
             <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 mt-12">
-              {/* Logo & Branding */}
-              <div className="rounded-lg border p-8 shadow-sm">
-                <h2 className="text-2xl font-bold mb-4">Logo & Branding</h2>
+              {/* Logo Design */}
+              <div className="rounded-xl border border-border/50 p-8 shadow-sm hover:shadow-lg hover:border-primary/30 transition-all duration-300">
+                <h2 className="font-display text-2xl font-bold mb-4">Logo Design</h2>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <h3 className="font-semibold mb-2">What's Included:</h3>
@@ -91,21 +91,25 @@ export default function PricingPage() {
                     </ul>
                   </div>
                   <div className="bg-muted p-4 rounded-lg">
-                    <p className="text-lg font-bold">Starting at $750</p>
+                    <p className="text-lg font-bold">$90/hour</p>
                     <p className="text-sm text-muted-foreground mt-2">
-                      Perfect for new businesses or rebranding projects
+                      or based on per project
                     </p>
                   </div>
                 </div>
               </div>
 
               {/* Website Design & Build */}
-              <div className="rounded-lg border p-8 shadow-sm">
-                <h2 className="text-2xl font-bold mb-4">Website Design & Build</h2>
+              <div className="rounded-xl border border-border/50 p-8 shadow-sm hover:shadow-lg hover:border-primary/30 transition-all duration-300">
+                <h2 className="font-display text-2xl font-bold mb-4">Fully Custom Website</h2>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <h3 className="font-semibold mb-2">What's Included:</h3>
                     <ul className="space-y-2">
+                      <li className="flex items-start gap-2">
+                        <ArrowRight className="h-4 w-4 text-primary mt-1" />
+                        <span>Custom website using Cursor or website builder</span>
+                      </li>
                       <li className="flex items-start gap-2">
                         <ArrowRight className="h-4 w-4 text-primary mt-1" />
                         <span>Custom responsive design</span>
@@ -121,7 +125,7 @@ export default function PricingPage() {
                     </ul>
                   </div>
                   <div className="bg-muted p-4 rounded-lg">
-                    <p className="text-lg font-bold">Starting at $2,500</p>
+                    <p className="text-lg font-bold">Starting at $700</p>
                     <p className="text-sm text-muted-foreground mt-2">
                       Professional websites that convert visitors into customers
                     </p>
@@ -129,9 +133,9 @@ export default function PricingPage() {
                 </div>
               </div>
 
-              {/* Social Media Design & Management */}
-              <div className="rounded-lg border p-8 shadow-sm">
-                <h2 className="text-2xl font-bold mb-4">Social Media Management</h2>
+              {/* Social Media Management */}
+              <div className="rounded-xl border border-border/50 p-8 shadow-sm hover:shadow-lg hover:border-primary/30 transition-all duration-300">
+                <h2 className="font-display text-2xl font-bold mb-4">Social Media Management</h2>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <h3 className="font-semibold mb-2">What's Included:</h3>
@@ -151,17 +155,17 @@ export default function PricingPage() {
                     </ul>
                   </div>
                   <div className="bg-muted p-4 rounded-lg">
-                    <p className="text-lg font-bold">Starting at $500/month</p>
+                    <p className="text-lg font-bold">$75/hour</p>
                     <p className="text-sm text-muted-foreground mt-2">
-                      Consistent social media presence and growth
+                      or custom plan for $300-$800/mo
                     </p>
                   </div>
                 </div>
               </div>
 
-              {/* Marketing Design & Growth */}
-              <div className="rounded-lg border p-8 shadow-sm">
-                <h2 className="text-2xl font-bold mb-4">Marketing Design & Growth</h2>
+              {/* Marketing & SEO Growth */}
+              <div className="rounded-xl border border-border/50 p-8 shadow-sm hover:shadow-lg hover:border-primary/30 transition-all duration-300">
+                <h2 className="font-display text-2xl font-bold mb-4">Marketing and SEO Growth</h2>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <h3 className="font-semibold mb-2">What's Included:</h3>
@@ -169,6 +173,10 @@ export default function PricingPage() {
                       <li className="flex items-start gap-2">
                         <ArrowRight className="h-4 w-4 text-primary mt-1" />
                         <span>Marketing strategy development</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <ArrowRight className="h-4 w-4 text-primary mt-1" />
+                        <span>SEO optimization and growth</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <ArrowRight className="h-4 w-4 text-primary mt-1" />
@@ -181,9 +189,9 @@ export default function PricingPage() {
                     </ul>
                   </div>
                   <div className="bg-muted p-4 rounded-lg">
-                    <p className="text-lg font-bold">Starting at $1,000/month</p>
+                    <p className="text-lg font-bold">$75/hour</p>
                     <p className="text-sm text-muted-foreground mt-2">
-                      Comprehensive marketing solutions for business growth
+                      or based on needs
                     </p>
                   </div>
                 </div>
