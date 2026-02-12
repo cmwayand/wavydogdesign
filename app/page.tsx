@@ -243,7 +243,7 @@ export default function Home() {
 									customers
 								</p>
 							</div>
-							<div className="flex flex-col items-center space-y-2 rounded-lg border border-border/50 bg-gradient-to-br from-card via-card/95 to-card p-6 shadow-sm hover:border-purple-500/20 hover:shadow-md transition-all">
+							<div className="flex flex-col items-center space-y-2 rounded-xl border border-border/50 bg-gradient-to-br from-card via-card/95 to-card p-6 shadow-sm hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1 transition-all duration-300">
 								<div className="rounded-full bg-gradient-to-br from-primary/10 to-purple-500/10 p-3">
 									<PenTool className="h-6 w-6 text-primary" />
 								</div>
@@ -252,7 +252,7 @@ export default function Home() {
 									Distinctive visual identities that make your brand memorable
 								</p>
 							</div>
-							<div className="flex flex-col items-center space-y-2 rounded-lg border border-border/50 bg-gradient-to-br from-card via-card/95 to-card p-6 shadow-sm hover:border-blue-500/20 hover:shadow-md transition-all">
+							<div className="flex flex-col items-center space-y-2 rounded-xl border border-border/50 bg-gradient-to-br from-card via-card/95 to-card p-6 shadow-sm hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1 transition-all duration-300">
 								<div className="rounded-full bg-gradient-to-br from-blue-500/10 to-primary/10 p-3">
 									<MessageSquare className="h-6 w-6 text-primary" />
 								</div>
@@ -270,7 +270,7 @@ export default function Home() {
 									Eye-catching print and digital collateral that drives results
 								</p>
 							</div>
-							<div className="flex flex-col items-center space-y-2 rounded-lg border border-border/50 bg-gradient-to-br from-card via-card/95 to-card p-6 shadow-sm hover:border-purple-500/20 hover:shadow-md transition-all">
+							<div className="flex flex-col items-center space-y-2 rounded-xl border border-border/50 bg-gradient-to-br from-card via-card/95 to-card p-6 shadow-sm hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1 transition-all duration-300">
 								<div className="rounded-full bg-gradient-to-br from-purple-500/10 to-primary/10 p-3">
 									<ArrowRight className="h-6 w-6 text-primary" />
 								</div>
@@ -280,7 +280,7 @@ export default function Home() {
 									effectively
 								</p>
 							</div>
-							<div className="flex flex-col items-center space-y-2 rounded-lg border border-border/50 bg-gradient-to-br from-card via-card/95 to-card p-6 shadow-sm hover:border-blue-500/20 hover:shadow-md transition-all">
+							<div className="flex flex-col items-center space-y-2 rounded-xl border border-border/50 bg-gradient-to-br from-card via-card/95 to-card p-6 shadow-sm hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1 transition-all duration-300">
 								<div className="rounded-full bg-gradient-to-br from-blue-500/10 to-purple-500/10 p-3">
 									<Globe className="h-6 w-6 text-primary" />
 								</div>

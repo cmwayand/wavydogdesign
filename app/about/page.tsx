@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FlipCard } from "@/components/flip-card"
 import { MobileMenu } from "@/components/MobileMenu";
 import { navLinks } from "@/constants/navigation";
 
@@ -62,58 +61,56 @@ export default function AboutPage() {
 								About Wavy Dog Design
 							</h1>
 							<p className="max-w-2xl text-lg md:text-xl text-muted-foreground">
-								Transforming brands through exceptional website design and strategic branding
+								Transforming brands and websites through exceptional design, creative ideas and personality.
 							</p>
 						</div>
 
-						{/* Claire Section */}
-						<div className="max-w-4xl mx-auto mb-20">
-							<div className="flex flex-col md:flex-row gap-12 items-center">
-								<div className="flex-shrink-0">
-									<FlipCard
-										frontImage="/claire.png"
-										backImage="/claireback.png"
-										alt="Claire Wayand"
-									/>
+						{/* Team Members Cards */}
+						<div className="max-w-5xl mx-auto mb-20">
+							<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+								{/* Claire Card */}
+								<div className="rounded-xl border border-border/50 bg-card p-6 shadow-sm hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1 transition-all duration-300">
+									<div className="flex flex-col items-center text-center">
+										<div className="relative w-32 h-32 mb-4 rounded-full overflow-hidden border-2 border-primary/30">
+											<Image
+												src="/claire.png"
+												alt="Claire Wayand"
+												fill
+												className="object-contain scale-110"
+											/>
+										</div>
+										<h2 className="font-display text-2xl font-bold mb-2">Claire Wayand</h2>
+										<p className="text-lg text-primary mb-4">UX/UI, Web and Product Expert</p>
+										<p className="text-muted-foreground leading-relaxed text-sm">
+											With 8 years in graphic design and 5 years in UX/UI product and marketing, 
+											Claire leads Wavy Dog Design with a passion for creating stunning websites and 
+											compelling brand identities. Her expertise spans from initial concept 
+											development to final implementation, ensuring every project reflects 
+											your unique vision and drives results.
+										</p>
+									</div>
 								</div>
-								<div className="flex-1 text-center md:text-left">
-									<h2 className="font-display text-3xl font-bold mb-3">Claire Wayand</h2>
-									<p className="text-lg text-primary mb-4">UX/UI, Web and Product Expert</p>
-									<p className="text-muted-foreground leading-relaxed">
-										With 8 years in graphic design and 5 years in UX/UI product and marketing, 
-										Claire leads Wavy Dog Design with a passion for creating stunning websites and 
-										compelling brand identities. Her expertise spans from initial concept 
-										development to final implementation, ensuring every project reflects 
-										your unique vision and drives results.
-									</p>
-								</div>
-							</div>
-						</div>
 
-						{/* Lisa Wayand Section */}
-						<div className="max-w-4xl mx-auto mb-20">
-							<div className="flex flex-col md:flex-row gap-12 items-center">
-								<div className="flex-shrink-0">
-									<FlipCard
-										frontImage="/lisaabout.png"
-										backImage="/lisaback.png"
-										alt="Lisa Wayand"
-									/>
-								</div>
-								<div className="flex-1 text-center md:text-left">
-									<h2 className="font-display text-3xl font-bold mb-3">Lisa Wayand</h2>
-									<p className="text-lg text-primary mb-4">Art Director, Space Planner, Branding and Print Production</p>
-									<p className="text-muted-foreground leading-relaxed mb-4">
-										Lisa brings expertise in art direction and customer experience design to 
-										Wavy Dog Design. She focuses on creating cohesive visual narratives and 
-										ensuring every touchpoint delivers an exceptional user experience.
-									</p>
-									<p className="text-muted-foreground leading-relaxed">
-										With a keen eye for detail and a passion for user-centered design, Lisa 
-										helps shape the visual and experiential aspects of our projects, ensuring 
-										they not only look beautiful but also provide meaningful interactions 
-										for users.
-									</p>
+								{/* Lisa Card */}
+								<div className="rounded-xl border border-border/50 bg-card p-6 shadow-sm hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1 transition-all duration-300">
+									<div className="flex flex-col items-center text-center">
+										<div className="relative w-32 h-32 mb-4 rounded-full overflow-hidden border-2 border-primary/30">
+											<Image
+												src="/lisaabout.png"
+												alt="Lisa Wayand"
+												fill
+												className="object-cover"
+											/>
+										</div>
+										<h2 className="font-display text-2xl font-bold mb-2">Lisa Wayand</h2>
+										<p className="text-lg text-primary mb-4">Art Director, Space Planner, Branding and Print Production</p>
+										<p className="text-muted-foreground leading-relaxed text-sm">
+											With 30+ years of experience in print, production, and art direction, Lisa brings 
+											expertise in art direction and customer experience design to Wavy Dog Design. She focuses 
+											on creating cohesive visual narratives and ensuring every touchpoint delivers an 
+											exceptional user experience.
+										</p>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -148,14 +145,7 @@ export default function AboutPage() {
 
 							{/* Detailed About Section */}
 							<div className="prose prose-invert max-w-none space-y-6">
-								<div>
-									<h3 className="font-display text-2xl font-bold mb-4">Design Expertise</h3>
-									<p className="text-muted-foreground leading-relaxed">
-										Lisa and Claire combine decades of complementary design experience to deliver the full creative package. Claire brings 8 years in graphic design and 5 years in UX/UI product and marketing, with deep expertise in B2B SaaS, startup app development, and marketing-driven design that turns strategy into results. Lisa adds 20+ years of mastery in print production, publishing, and layout, with an expert eye as an art director and space planner. Together, they seamlessly unite digital and print—creating complete brand systems, from logos and websites to books, documents, business cards, posters, and launch-ready assets. One team. Total brand execution. Built to bring your business to life.
-									</p>
-								</div>
-
-								<div className="bg-card border rounded-lg p-6 mt-8">
+								<div className="bg-card border rounded-lg p-6">
 									<h3 className="font-display text-xl font-semibold mb-4">Why Work With Us</h3>
 									<ul className="space-y-3 text-muted-foreground">
 										<li className="flex items-start gap-3">
