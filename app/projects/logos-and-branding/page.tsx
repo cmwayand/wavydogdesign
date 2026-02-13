@@ -86,6 +86,9 @@ export default function LogosAndBrandingPage() {
 		{ src: "/jjlogo.png", alt: "JJ Logo" },
 		{ src: "/jjlogo2.png", alt: "JJ Logo 2" },
 		{ src: "/rrlogo.jpg", alt: "RR Logo" },
+		{ src: "/jmu.png", alt: "JMU Logo" },
+		{ src: "/hamilton1.png", alt: "Hamilton Logo 1" },
+		{ src: "/hamilton2.png", alt: "Hamilton Logo 2" },
 	];
 
 	const brandingGalleryImages = [

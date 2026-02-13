@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { MobileMenu } from "@/components/MobileMenu";
 import { navLinks } from "@/constants/navigation";
 import { ArrowLeft, X, Palette, PenTool, Type, Sparkles, ChevronLeft, ChevronRight } from "lucide-react";
@@ -10,18 +10,71 @@ import { ArrowLeft, X, Palette, PenTool, Type, Sparkles, ChevronLeft, ChevronRig
 export default function PrintAndProductionPage() {
 	const [expandedImage, setExpandedImage] = useState<string | null>(null);
 	const [currentImageIndex, setCurrentImageIndex] = useState(0);
+	const [currentCarouselType, setCurrentCarouselType] = useState<"wine" | "ge" | null>(null);
+
+	const wineGalleryImages = [
+		{ src: "/printcover.png", alt: "Wine & Country Magazine Cover" },
+		{ src: "/magazinespread.png", alt: "Wine & Country Magazine Spread" },
+		{ src: "/covers.png", alt: "Wine & Country Magazine Covers" },
+	];
+
+	const geGalleryImages = [
+		{ src: "/ge1.jpg", alt: "Print Design 1" },
+		{ src: "/ge.jpg", alt: "Print Design 2" },
+	];
+
+	const getCurrentGallery = () => {
+		if (currentCarouselType === "wine") return wineGalleryImages;
+		if (currentCarouselType === "ge") return geGalleryImages;
+		return null;
+	};
+
+	const nextImage = useCallback(() => {
+		if (currentCarouselType === "wine") {
+			setCurrentImageIndex((prev) => {
+				const nextIndex = (prev + 1) % wineGalleryImages.length;
+				setExpandedImage(wineGalleryImages[nextIndex].src);
+				return nextIndex;
+			});
+		} else if (currentCarouselType === "ge") {
+			setCurrentImageIndex((prev) => {
+				const nextIndex = (prev + 1) % geGalleryImages.length;
+				setExpandedImage(geGalleryImages[nextIndex].src);
+				return nextIndex;
+			});
+		}
+	}, [currentCarouselType]);
+
+	const previousImage = useCallback(() => {
+		if (currentCarouselType === "wine") {
+			setCurrentImageIndex((prev) => {
+				const prevIndex = (prev - 1 + wineGalleryImages.length) % wineGalleryImages.length;
+				setExpandedImage(wineGalleryImages[prevIndex].src);
+				return prevIndex;
+			});
+		} else if (currentCarouselType === "ge") {
+			setCurrentImageIndex((prev) => {
+				const prevIndex = (prev - 1 + geGalleryImages.length) % geGalleryImages.length;
+				setExpandedImage(geGalleryImages[prevIndex].src);
+				return prevIndex;
+			});
+		}
+	}, [currentCarouselType]);
 
 	useEffect(() => {
 		const handleEscape = (e: KeyboardEvent) => {
 			if (e.key === "Escape") {
 				setExpandedImage(null);
+				setCurrentCarouselType(null);
 			}
 		};
 		const handleArrowKeys = (e: KeyboardEvent) => {
-			if (expandedImage) {
+			if (expandedImage && currentCarouselType) {
 				if (e.key === "ArrowLeft") {
+					e.preventDefault();
 					previousImage();
 				} else if (e.key === "ArrowRight") {
+					e.preventDefault();
 					nextImage();
 				}
 			}
@@ -36,7 +89,7 @@ export default function PrintAndProductionPage() {
 			document.removeEventListener("keydown", handleArrowKeys);
 			document.body.style.overflow = "unset";
 		};
-	}, [expandedImage, currentImageIndex]);
+	}, [expandedImage, currentCarouselType, nextImage, previousImage]);
 
 	const printServices = [
 		{
@@ -66,30 +119,32 @@ export default function PrintAndProductionPage() {
 			title: "Wine & Country Magazine Spreads",
 			description: "Professional print and production services including business cards, marketing materials, and branded stationery.",
 			image: "/printcover.png",
+			isCarousel: true,
+			carouselType: "wine",
+		},
+		{
+			title: "Print Design",
+			description: "High-quality print design and production work.",
+			image: "/ge.jpg",
+			isCarousel: true,
+			carouselType: "ge",
+		},
+		{
+			title: "Business Cards",
+			description: "Professional business cards that make a memorable first impression and reflect your brand identity.",
+			image: "/philipcards.png",
+			isCarousel: false,
 		},
 	];
 
-	const galleryImages = [
-		{ src: "/printcover.png", alt: "Wine & Country Magazine Cover" },
-		{ src: "/magazinespread.png", alt: "Wine & Country Magazine Spread" },
-		{ src: "/covers.png", alt: "Wine & Country Magazine Covers" },
-	];
-
-	const openCarousel = (index: number) => {
+	const openCarousel = (index: number, carouselType: "wine" | "ge") => {
+		setCurrentCarouselType(carouselType);
 		setCurrentImageIndex(index);
-		setExpandedImage(galleryImages[index].src);
-	};
-
-	const nextImage = () => {
-		const nextIndex = (currentImageIndex + 1) % galleryImages.length;
-		setCurrentImageIndex(nextIndex);
-		setExpandedImage(galleryImages[nextIndex].src);
-	};
-
-	const previousImage = () => {
-		const prevIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
-		setCurrentImageIndex(prevIndex);
-		setExpandedImage(galleryImages[prevIndex].src);
+		if (carouselType === "wine") {
+			setExpandedImage(wineGalleryImages[index].src);
+		} else {
+			setExpandedImage(geGalleryImages[index].src);
+		}
 	};
 
 	return (
@@ -157,16 +212,6 @@ export default function PrintAndProductionPage() {
 								</p>
 							</div>
 
-							{/* Hero Image */}
-							<div className="relative aspect-video rounded-2xl overflow-hidden mb-12 border border-border/50">
-								<Image
-									src="/printcover.png"
-									alt="Print and Production"
-									fill
-									className="object-cover"
-								/>
-							</div>
-
 							{/* Services Grid */}
 							<div className="mb-12">
 								<h2 className="font-display text-2xl font-bold mb-6">Our Print Services</h2>
@@ -194,14 +239,20 @@ export default function PrintAndProductionPage() {
 							{/* Portfolio Examples */}
 							<div className="mb-12">
 								<h2 className="font-display text-2xl font-bold mb-6">Print Portfolio</h2>
-								<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+								<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 									{portfolioItems.map((item, index) => (
 										<button
 											key={index}
-											onClick={() => openCarousel(0)}
-											className="group relative overflow-hidden rounded-xl border border-border/50 bg-card hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1 text-left"
+											onClick={() => {
+												if (item.isCarousel && item.carouselType) {
+													openCarousel(0, item.carouselType as "wine" | "ge");
+												} else {
+													setExpandedImage(item.image);
+												}
+											}}
+											className="group relative overflow-hidden rounded-xl border border-border/50 bg-card hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1 text-left flex flex-col h-full"
 										>
-											<div className="relative aspect-video overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900">
+											<div className="relative aspect-video overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900 flex-shrink-0">
 												<Image
 													src={item.image}
 													alt={item.title}
@@ -209,9 +260,9 @@ export default function PrintAndProductionPage() {
 													className="object-cover group-hover:scale-105 transition-transform duration-500"
 												/>
 											</div>
-											<div className="p-6">
+											<div className="p-6 flex-grow flex flex-col">
 												<h3 className="font-display text-xl font-semibold mb-2">{item.title}</h3>
-												<p className="text-muted-foreground text-sm leading-relaxed">
+												<p className="text-muted-foreground text-sm leading-relaxed flex-grow">
 													{item.description}
 												</p>
 											</div>
@@ -224,10 +275,16 @@ export default function PrintAndProductionPage() {
 							{expandedImage && (
 								<div
 									className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
-									onClick={() => setExpandedImage(null)}
+									onClick={() => {
+										setExpandedImage(null);
+										setCurrentCarouselType(null);
+									}}
 								>
 									<button
-										onClick={() => setExpandedImage(null)}
+										onClick={() => {
+											setExpandedImage(null);
+											setCurrentCarouselType(null);
+										}}
 										className="absolute top-4 right-4 text-white hover:text-primary transition-colors z-10"
 										aria-label="Close carousel"
 									>
@@ -235,7 +292,7 @@ export default function PrintAndProductionPage() {
 									</button>
 									
 									{/* Previous Button */}
-									{galleryImages.length > 1 && (
+									{getCurrentGallery() && getCurrentGallery()!.length > 1 && (
 										<button
 											onClick={(e) => {
 												e.stopPropagation();
@@ -252,7 +309,7 @@ export default function PrintAndProductionPage() {
 									<div className="relative max-w-7xl max-h-[90vh] w-full h-full" onClick={(e) => e.stopPropagation()}>
 										<Image
 											src={expandedImage}
-											alt={galleryImages[currentImageIndex].alt}
+											alt={getCurrentGallery()?.find(img => img.src === expandedImage)?.alt || "Expanded view"}
 											fill
 											className="object-contain"
 											priority
@@ -260,7 +317,7 @@ export default function PrintAndProductionPage() {
 									</div>
 									
 									{/* Next Button */}
-									{galleryImages.length > 1 && (
+									{getCurrentGallery() && getCurrentGallery()!.length > 1 && (
 										<button
 											onClick={(e) => {
 												e.stopPropagation();
@@ -274,9 +331,9 @@ export default function PrintAndProductionPage() {
 									)}
 									
 									{/* Image Counter */}
-									{galleryImages.length > 1 && (
+									{getCurrentGallery() && getCurrentGallery()!.length > 1 && (
 										<div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white bg-black/50 rounded-full px-4 py-2 text-sm z-10">
-											{currentImageIndex + 1} / {galleryImages.length}
+											{currentImageIndex + 1} / {getCurrentGallery()!.length}
 										</div>
 									)}
 								</div>

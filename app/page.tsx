@@ -576,6 +576,47 @@ export default function Home() {
 					</div>
 				</section>
 
+				{/* Clients Section */}
+				<section className="w-full py-12 md:py-24 lg:py-32 bg-background">
+					<div className="container px-4 md:px-6">
+						<div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+							<div className="space-y-2">
+								<h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+									Clients We've Worked With
+								</h2>
+								<p className="max-w-[700px] text-muted-foreground md:text-xl">
+									Trusted by businesses and organizations across various industries
+								</p>
+							</div>
+						</div>
+
+						<div className="max-w-6xl mx-auto">
+							<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
+								{[
+									"Henleys Orchard",
+									"Charlottesville Organizing",
+									"Shifthq.ai",
+									"Core Health",
+									"The Nook Restaurant",
+									"Square One",
+									"UVA",
+									"Madison Automotive Apprentices",
+									"Wine & Country",
+								].map((client, index) => (
+									<div
+										key={index}
+										className="flex items-center justify-center p-4 rounded-lg border border-border/50 bg-card hover:border-primary/50 transition-all duration-300 hover:shadow-md text-center"
+									>
+										<span className="text-sm md:text-base font-medium text-foreground">
+											{client}
+										</span>
+									</div>
+								))}
+							</div>
+						</div>
+					</div>
+				</section>
+
 				<section
 					id="pricing"
 					className="w-full py-12 md:py-24 lg:py-32 bg-muted/50 scroll-mt-16"
