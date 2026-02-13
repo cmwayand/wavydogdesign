@@ -51,14 +51,14 @@ const portfolioProjects = [
 	},
 	{
 		title: "Logos, Branding, Packaging",
-		description: "Complete brand identity design including logos, color palettes, typography, and visual identity systems.",
+		description: "Complete brand identity design including logos, color palettes, typography, visual identity systems, and packaging design.",
 		image: "/gardenlogo.jpg",
 		category: "Branding and Web Design",
 		slug: "logos-and-branding",
 	},
 	{
 		title: "Print and Production",
-		description: "Complete brand identity design including logos, color palettes, typography, and visual identity systems.",
+		description: "Professional print and production services including business cards, marketing materials, magazines, and high-quality printed collateral.",
 		image: "/printcover.png",
 		category: "Branding and Web Design",
 		slug: "print-and-production",
