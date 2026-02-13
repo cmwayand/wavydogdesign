@@ -71,7 +71,7 @@ export default function PricingPage() {
             <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 mt-12">
               {/* Logo Design */}
               <div className="rounded-xl border border-border/50 p-8 shadow-sm hover:shadow-lg hover:border-primary/30 transition-all duration-300">
-                <h2 className="font-display text-2xl font-bold mb-4">Logo Design</h2>
+                <h2 className="font-display text-2xl font-bold mb-4">Full Brand and Logo Package</h2>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <h3 className="font-semibold mb-2">What's Included:</h3>
@@ -91,9 +91,9 @@ export default function PricingPage() {
                     </ul>
                   </div>
                   <div className="bg-muted p-4 rounded-lg">
-                    <p className="text-lg font-bold">$90/hour</p>
+                    <p className="text-lg font-bold">Starting at $1,000</p>
                     <p className="text-sm text-muted-foreground mt-2">
-                      or based on per project
+                      Full custom branding and logo package
                     </p>
                   </div>
                 </div>
@@ -125,7 +125,7 @@ export default function PricingPage() {
                     </ul>
                   </div>
                   <div className="bg-muted p-4 rounded-lg">
-                    <p className="text-lg font-bold">Starting at $700</p>
+                    <p className="text-lg font-bold">Starting at $1,000</p>
                     <p className="text-sm text-muted-foreground mt-2">
                       Professional websites that convert visitors into customers
                     </p>
@@ -158,40 +158,6 @@ export default function PricingPage() {
                     <p className="text-lg font-bold">$75/hour</p>
                     <p className="text-sm text-muted-foreground mt-2">
                       or custom plan for $300-$800/mo
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Marketing & SEO Growth */}
-              <div className="rounded-xl border border-border/50 p-8 shadow-sm hover:shadow-lg hover:border-primary/30 transition-all duration-300">
-                <h2 className="font-display text-2xl font-bold mb-4">Marketing and SEO Growth</h2>
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <h3 className="font-semibold mb-2">What's Included:</h3>
-                    <ul className="space-y-2">
-                      <li className="flex items-start gap-2">
-                        <ArrowRight className="h-4 w-4 text-primary mt-1" />
-                        <span>Marketing strategy development</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <ArrowRight className="h-4 w-4 text-primary mt-1" />
-                        <span>SEO optimization and growth</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <ArrowRight className="h-4 w-4 text-primary mt-1" />
-                        <span>Digital & print materials</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <ArrowRight className="h-4 w-4 text-primary mt-1" />
-                        <span>Campaign management</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="bg-muted p-4 rounded-lg">
-                    <p className="text-lg font-bold">$75/hour</p>
-                    <p className="text-sm text-muted-foreground mt-2">
-                      or based on needs
                     </p>
                   </div>
                 </div>
