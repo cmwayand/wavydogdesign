@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import {
 	ArrowRight,
 	Palette,
@@ -43,31 +43,67 @@ const testimonials = [
 
 const portfolioProjects = [
 	{
-		title: "Henleys Orchard",
-		description: "Drove increase in page views, wedding bookings, and improved social media following and engagement.",
-		image: "/henleysorchard.png",
+		title: "Ads and Marketing",
+		description: "Strategic advertising and marketing campaigns that drive engagement, increase visibility, and grow your business.",
+		image: "/henleypost3.png",
 		category: "Marketing and Growth",
-		slug: "henleys-orchard",
+		slug: "ads-and-marketing",
 	},
 	{
-		title: "Core Health",
-		description: "Increasing thermography bookings and awareness through website optimization, brand positioning, and growth strategies.",
-		image: "/corehealth.png",
-		category: "Optimizing Online Presence and Scaling Clients",
-		slug: "core-health",
-	},
-	{
-		title: "Hamilton Legal Services",
-		description: "Complete brand identity and website design for a legal services firm.",
-		image: "/hamiltonnew.png",
+		title: "Logos, Branding, Packaging",
+		description: "Complete brand identity design including logos, color palettes, typography, and visual identity systems.",
+		image: "/gardenlogo.jpg",
 		category: "Branding and Web Design",
-		slug: "hamilton-legal",
-		comingSoon: true,
+		slug: "logos-and-branding",
+	},
+	{
+		title: "Print and Production",
+		description: "Complete brand identity design including logos, color palettes, typography, and visual identity systems.",
+		image: "/printcover.png",
+		category: "Branding and Web Design",
+		slug: "print-and-production",
+	},
+	{
+		title: "UX/UI, Websites, Apps",
+		description: "UX audits, web design, and digital designs that create intuitive user experiences and beautiful interfaces.",
+		image: "/iphoneslanding.png",
+		category: "Web Design and Development",
+		slug: "ux-and-websites",
+	},
+	{
+		title: "Illustrations and Art",
+		description: "Hand-drawn logos, custom illustrations, and artistic designs that bring unique character and personality to your brand.",
+		image: "/manatee.jpg",
+		category: "Art and Design",
+		slug: "illustrations-and-art",
 	},
 ];
 
 export default function Home() {
 	const [currentTestimonial, setCurrentTestimonial] = useState(0);
+	
+	// Generate particle positions once
+	const particles = useMemo(() => {
+		return Array.from({ length: 20 }).map((_, i) => ({
+			id: i,
+			size: Math.random() * 8 + 4,
+			left: Math.random() * 100,
+			top: Math.random() * 100,
+			duration: Math.random() * 3 + 2,
+			delay: Math.random() * 2,
+		}));
+	}, []);
+	
+	const purpleParticles = useMemo(() => {
+		return Array.from({ length: 15 }).map((_, i) => ({
+			id: i,
+			size: Math.random() * 12 + 6,
+			left: Math.random() * 100,
+			top: Math.random() * 100,
+			duration: Math.random() * 4 + 3,
+			delay: Math.random() * 2,
+		}));
+	}, []);
 
 	const nextTestimonial = () => {
 		setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
@@ -130,82 +166,106 @@ export default function Home() {
 				</div>
 			</header>
 			<main className="flex-1">
-				<section className="relative w-full overflow-hidden py-12 md:py-20 lg:py-28">
-					{/* Animated gradient background */}
-					<div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900"></div>
+				<section className="relative w-full overflow-hidden py-20 md:py-32 lg:py-40 min-h-[90vh] flex items-center">
+					{/* Dark gradient background */}
+					<div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950"></div>
 					
-					{/* Animated geometric shapes */}
+					{/* Abstract glowing lines and particles radiating outward */}
 					<div className="absolute inset-0 overflow-hidden">
-						{/* Large glowing shape - bottom left */}
-						<div className="absolute -bottom-40 -left-40 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-						{/* Medium glowing shape - top right */}
-						<div className="absolute -top-20 -right-20 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-						{/* Small accent shape - center right */}
-						<div className="absolute top-1/2 right-10 w-64 h-64 bg-primary/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+						{/* Central glowing orb */}
+						<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/10 rounded-full blur-3xl"></div>
 						
-						{/* Abstract geometric shapes */}
-						<div className="absolute top-20 left-10 w-32 h-32 border-2 border-primary/30 rotate-45 rounded-lg blur-sm animate-pulse"></div>
-						<div className="absolute bottom-32 right-32 w-24 h-24 border-2 border-purple-400/30 rotate-12 rounded-lg blur-sm animate-pulse" style={{ animationDelay: '1.5s' }}></div>
-						<div className="absolute top-1/3 right-1/4 w-16 h-16 bg-primary/20 rounded-full blur-md animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+						{/* Radiating lines effect */}
+						<div className="absolute inset-0">
+							{/* Multiple radiating lines */}
+							{[0, 45, 90, 135, 180, 225, 270, 315].map((angle, i) => (
+								<div
+									key={i}
+									className="absolute top-1/2 left-1/2 origin-center w-0.5 h-full opacity-30"
+									style={{
+										transform: `translate(-50%, -50%) rotate(${angle}deg)`,
+										background: 'linear-gradient(to bottom, transparent, hsl(217.2 91.2% 59.8% / 0.3), transparent)',
+										animation: `pulse 3s ease-in-out infinite`,
+										animationDelay: `${i * 0.2}s`,
+									}}
+								/>
+							))}
+						</div>
+						
+						{/* Glowing particles */}
+						{particles.map((particle) => (
+							<div
+								key={particle.id}
+								className="absolute rounded-full bg-primary/20 blur-sm"
+								style={{
+									width: `${particle.size}px`,
+									height: `${particle.size}px`,
+									left: `${particle.left}%`,
+									top: `${particle.top}%`,
+									animation: `float ${particle.duration}s ease-in-out infinite`,
+									animationDelay: `${particle.delay}s`,
+								}}
+							/>
+						))}
+						
+						{/* Purple accent particles */}
+						{purpleParticles.map((particle) => (
+							<div
+								key={`purple-${particle.id}`}
+								className="absolute rounded-full bg-purple-500/15 blur-md"
+								style={{
+									width: `${particle.size}px`,
+									height: `${particle.size}px`,
+									left: `${particle.left}%`,
+									top: `${particle.top}%`,
+									animation: `float ${particle.duration}s ease-in-out infinite`,
+									animationDelay: `${particle.delay}s`,
+								}}
+							/>
+						))}
+						
+						{/* Subtle circular light effects */}
+						<div className="absolute top-20 right-20 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+						<div className="absolute bottom-32 left-32 w-48 h-48 bg-blue-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
 					</div>
 
-					<div className="relative container px-4 md:px-6 mx-auto">
-						<div className="grid gap-8 lg:grid-cols-2 lg:gap-16 items-center min-h-[600px]">
-							{/* Left content */}
-							<div className="flex flex-col gap-6 z-10">
-								<div className="inline-block">
-									<span className="text-sm md:text-base font-semibold text-primary/80 uppercase tracking-wider">
-										Web Design & Branding Agency
-									</span>
-								</div>
-								<h1 className="font-hero text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl leading-tight">
-									<span className="block text-white">Scaling Businesses Through</span>
-									<span className="block bg-gradient-to-r from-primary via-purple-400 to-primary bg-clip-text text-transparent animate-gradient">
-										Beautiful Web Design
-									</span>
-									<span className="block text-white">and Branding</span>
-								</h1>
-								<p className="max-w-[600px] text-lg md:text-xl text-gray-300 leading-relaxed">
-									We grow businesses through exceptional branding and beautiful web UX/UI design. 
-									Fully custom websites and brand identities that help you scale and connect with your audience.
-								</p>
-								<div className="flex flex-col gap-4 min-[400px]:flex-row mt-2">
-									<Button size="lg" className="font-display bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/50 hover:shadow-xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105" asChild>
-										<Link href="#contact" className="flex items-center gap-2">
-											Start Your Project
-											<ArrowRight className="w-4 h-4" />
-										</Link>
-									</Button>
-									<Button size="lg" variant="outline" className="font-display border-2 border-white/20 bg-white/5 backdrop-blur-sm text-white hover:bg-white/10 hover:border-white/30 transition-all duration-300 hover:scale-105" asChild>
-										<Link href="/about">Learn More</Link>
-									</Button>
-								</div>
+					{/* Centered content */}
+					<div className="relative container px-4 md:px-6 mx-auto z-10">
+						<div className="flex flex-col items-center text-center max-w-4xl mx-auto space-y-8">
+							{/* Badge/Tagline */}
+							<div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/50 backdrop-blur-sm border border-primary/20">
+								<span className="text-sm md:text-base font-semibold text-primary/90 uppercase tracking-wider">
+									Design / Brand / Grow
+								</span>
 							</div>
-
-							{/* Right visual - Animated portfolio showcase */}
-							<div className="relative flex justify-center lg:justify-end items-center z-10">
-								<div className="relative w-full max-w-[900px]">
-									{/* Glowing backdrop effect */}
-									<div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-purple-500/20 to-blue-500/20 rounded-3xl blur-3xl scale-110 animate-pulse"></div>
-									
-									{/* Hero image */}
-									<div className="relative rounded-2xl overflow-hidden">
-										<Image
-											src="/headerimage.png"
-											alt="Wavy Dog Design"
-											width={900}
-											height={600}
-											className="object-cover w-full h-auto"
-											priority
-											quality={100}
-										/>
-									</div>
-
-									{/* Floating decorative elements with gradients */}
-									<div className="absolute -top-6 -right-6 w-20 h-20 bg-gradient-to-br from-primary/30 to-purple-500/30 rounded-full blur-xl animate-pulse"></div>
-									<div className="absolute -bottom-6 -left-6 w-16 h-16 bg-gradient-to-br from-purple-500/30 to-blue-500/30 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-									<div className="absolute top-1/2 -left-4 w-12 h-12 bg-gradient-to-br from-blue-500/20 to-primary/20 rounded-full blur-lg animate-pulse" style={{ animationDelay: '2s' }}></div>
-								</div>
+							
+							{/* Main Headline */}
+							<h1 className="font-hero text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl leading-tight text-white">
+								Your business partner in
+								<br />
+								<span className="bg-gradient-to-r from-primary via-purple-400 to-primary bg-clip-text text-transparent">
+									print and digital design
+								</span>
+							</h1>
+							
+							{/* Descriptive Paragraph */}
+							<p className="max-w-4xl text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed">
+								We're a full-service creative engine specializing in everything from seamless UX/UI and web builds to bold logos and high-end editorial print.<br />
+								If it's digital or physical, we make it move.
+							</p>
+							
+							{/* CTA Button */}
+							<div className="pt-4">
+								<Button 
+									size="lg" 
+									className="font-display bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/50 hover:shadow-xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105 px-8 py-6 text-lg" 
+									asChild
+								>
+									<Link href="#work" className="flex items-center gap-2">
+										View our work
+										<ArrowRight className="w-5 h-5" />
+									</Link>
+								</Button>
 							</div>
 						</div>
 					</div>
@@ -359,7 +419,7 @@ export default function Home() {
 								</div>
 							</div>
 
-							<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+							<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
 								{portfolioProjects.map((project, index) => {
 									const isComingSoon = (project as any).comingSoon;
 									
@@ -406,7 +466,11 @@ export default function Home() {
 													src={project.image}
 													alt={project.title}
 													fill
-													className="object-cover group-hover:scale-105 transition-transform duration-500"
+													className={`group-hover:scale-105 transition-transform duration-500 ${
+														project.image === "/manatee.jpg" 
+															? "object-cover object-top" 
+															: "object-cover"
+													}`}
 												/>
 												<div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 											</div>
@@ -648,7 +712,11 @@ export default function Home() {
 								<div className="space-y-2">
 									<p className="flex items-center gap-2">
 										<MessageSquare className="h-4 w-4 text-primary" />
-										<span>claire@wavydogdesign.com</span>
+										<span>lmwayand@gmail.com</span>
+									</p>
+									<p className="flex items-center gap-2">
+										<MessageSquare className="h-4 w-4 text-primary" />
+										<span>cmwayand@gmail.com</span>
 									</p>
 								</div>
 								<div className="flex space-x-4">

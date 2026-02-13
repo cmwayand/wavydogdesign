@@ -113,3 +113,14 @@
 .animate-fade-in-out-delayed {
 	animation: fade-in-out-delayed 8s ease-in-out infinite;
 }
+
+@keyframes float {
+	0%, 100% {
+		transform: translate(0, 0) scale(1);
+		opacity: 0.3;
+	}
+	50% {
+		transform: translate(20px, -20px) scale(1.2);
+		opacity: 0.6;
+	}
+}

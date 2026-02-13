@@ -42,7 +42,8 @@ const ContactForm = () => {
 		const subject = `Project Inquiry from ${firstName} ${lastName}`;
 		const body = `Name: ${firstName} ${lastName}\nEmail: ${email}\nProject Type: ${projectType}\n\nMessage:\n${message}`;
 
-		window.location.href = `mailto:claire@wavydogdesign.com?subject=${encodeURIComponent(
+		// Send to both email addresses
+		window.location.href = `mailto:lmwayand@gmail.com,cmwayand@gmail.com?subject=${encodeURIComponent(
 			subject
 		)}&body=${encodeURIComponent(body)}`;
 

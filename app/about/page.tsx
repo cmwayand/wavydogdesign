@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { MobileMenu } from "@/components/MobileMenu";
 import { navLinks } from "@/constants/navigation";
+import { Linkedin } from "lucide-react";
 
 export default function AboutPage() {
 	return (
@@ -61,7 +62,7 @@ export default function AboutPage() {
 								About Wavy Dog Design
 							</h1>
 							<p className="max-w-2xl text-lg md:text-xl text-muted-foreground">
-								Transforming brands and websites through exceptional design, creative ideas and personality.
+								From UX/UI and web development to premium print production and brand identity, we bridge the gap between digital innovation and tangible craft.
 							</p>
 						</div>
 
@@ -76,11 +77,22 @@ export default function AboutPage() {
 												src="/claire.png"
 												alt="Claire Wayand"
 												fill
-												className="object-contain scale-110"
+												className="object-cover"
 											/>
 										</div>
 										<h2 className="font-display text-2xl font-bold mb-2">Claire Wayand</h2>
-										<p className="text-lg text-primary mb-4">UX/UI, Web and Product Expert</p>
+										<p className="text-lg text-primary mb-4">UX/UI, web and digital expert</p>
+										<div className="mb-4">
+											<Link
+												href="https://www.linkedin.com/in/clairewayand/"
+												target="_blank"
+												rel="noopener noreferrer"
+												className="inline-flex items-center gap-2 rounded-full bg-primary/10 p-2 text-primary hover:bg-primary/20 transition-colors"
+												aria-label="Claire's LinkedIn"
+											>
+												<Linkedin className="h-5 w-5" />
+											</Link>
+										</div>
 										<p className="text-muted-foreground leading-relaxed text-sm">
 											With 8 years in graphic design and 5 years in UX/UI product and marketing, 
 											Claire leads Wavy Dog Design with a passion for creating stunning websites and 
@@ -103,7 +115,18 @@ export default function AboutPage() {
 											/>
 										</div>
 										<h2 className="font-display text-2xl font-bold mb-2">Lisa Wayand</h2>
-										<p className="text-lg text-primary mb-4">Art Director, Space Planner, Branding and Print Production</p>
+										<p className="text-lg text-primary mb-4">Art director, print /production specialist</p>
+										<div className="mb-4">
+											<Link
+												href="https://www.linkedin.com/in/lisa-wayand-65a530b/"
+												target="_blank"
+												rel="noopener noreferrer"
+												className="inline-flex items-center gap-2 rounded-full bg-primary/10 p-2 text-primary hover:bg-primary/20 transition-colors"
+												aria-label="Lisa's LinkedIn"
+											>
+												<Linkedin className="h-5 w-5" />
+											</Link>
+										</div>
 										<p className="text-muted-foreground leading-relaxed text-sm">
 											With 30+ years of experience in print, production, and art direction, Lisa brings 
 											expertise in art direction and customer experience design to Wavy Dog Design. She focuses 
@@ -113,8 +136,19 @@ export default function AboutPage() {
 									</div>
 								</div>
 							</div>
+							
+							{/* Image Section */}
+							<div className="max-w-4xl mx-auto mt-16 mb-20">
+								<div className="relative aspect-[3/1] rounded-2xl overflow-hidden border border-border/50">
+									<Image
+										src="/cvillesign.jpg"
+										alt="Charlottesville Sign"
+										fill
+										className="object-cover"
+									/>
+								</div>
+							</div>
 						</div>
-
 
 						{/* Services Focus Section */}
 						<div className="max-w-[1000px] mx-auto space-y-8">
@@ -150,7 +184,7 @@ export default function AboutPage() {
 									<ul className="space-y-3 text-muted-foreground">
 										<li className="flex items-start gap-3">
 											<span className="text-primary font-bold mt-1">•</span>
-											<span><strong className="text-foreground">Personalized Service:</strong> Direct collaboration with Claire ensures your vision is understood and executed perfectly.</span>
+											<span><strong className="text-foreground">Personalized Service:</strong> Direct collaboration with Claire and Lisa ensures your vision is understood and executed perfectly.</span>
 										</li>
 										<li className="flex items-start gap-3">
 											<span className="text-primary font-bold mt-1">•</span>
@@ -163,6 +197,10 @@ export default function AboutPage() {
 										<li className="flex items-start gap-3">
 											<span className="text-primary font-bold mt-1">•</span>
 											<span><strong className="text-foreground">Client-Focused:</strong> Clear communication, transparency, and a deep understanding of your business objectives.</span>
+										</li>
+										<li className="flex items-start gap-3">
+											<span className="text-primary font-bold mt-1">•</span>
+											<span><strong className="text-foreground">Production and Print Specialist:</strong> 20+ years of experience in print production and art direction.</span>
 										</li>
 									</ul>
 								</div>
