@@ -261,8 +261,8 @@ export default function Home() {
 									className="font-display bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/50 hover:shadow-xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105 px-8 py-6 text-lg" 
 									asChild
 								>
-									<Link href="#work" className="flex items-center gap-2">
-										View our work
+									<Link href="#contact" className="flex items-center gap-2">
+										Contact us
 										<ArrowRight className="w-5 h-5" />
 									</Link>
 								</Button>
@@ -272,132 +272,6 @@ export default function Home() {
 
 					{/* Bottom gradient fade */}
 					<div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent"></div>
-				</section>
-
-				<section
-					id="services"
-					className="w-full py-8 md:py-16 lg:py-20 bg-gradient-to-b from-muted via-muted/95 to-muted scroll-mt-16 relative overflow-hidden"
-				>
-					{/* Subtle gradient overlay */}
-					<div className="absolute inset-0 bg-gradient-to-br from-blue-900/5 via-transparent to-purple-900/5 pointer-events-none"></div>
-					<div className="container px-4 md:px-6 relative z-10">
-						<div className="flex flex-col items-center justify-center space-y-4 text-center">
-							<div className="space-y-2">
-								<h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-									Our Services
-								</h2>
-								<p className="max-w-[700px] text-muted-foreground md:text-xl">
-									Comprehensive design and marketing solutions for businesses of
-									all sizes
-								</p>
-							</div>
-						</div>
-						<div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 py-12 md:grid-cols-2 lg:grid-cols-3">
-							<div className="flex flex-col items-center space-y-2 rounded-xl border border-border/50 bg-gradient-to-br from-card via-card/95 to-card p-6 shadow-sm hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1 transition-all duration-300">
-								<div className="rounded-full bg-gradient-to-br from-primary/10 to-blue-500/10 p-3">
-									<Globe className="h-6 w-6 text-primary" />
-								</div>
-								<h3 className="font-display text-xl font-semibold">Website Design & Updates</h3>
-								<p className="text-center text-muted-foreground">
-									Modern, responsive websites that convert visitors into
-									customers
-								</p>
-							</div>
-							<div className="flex flex-col items-center space-y-2 rounded-xl border border-border/50 bg-gradient-to-br from-card via-card/95 to-card p-6 shadow-sm hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1 transition-all duration-300">
-								<div className="rounded-full bg-gradient-to-br from-primary/10 to-purple-500/10 p-3">
-									<PenTool className="h-6 w-6 text-primary" />
-								</div>
-								<h3 className="font-display text-xl font-semibold">Branding & Logo Design</h3>
-								<p className="text-center text-muted-foreground">
-									Distinctive visual identities that make your brand memorable
-								</p>
-							</div>
-							<div className="flex flex-col items-center space-y-2 rounded-xl border border-border/50 bg-gradient-to-br from-card via-card/95 to-card p-6 shadow-sm hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1 transition-all duration-300">
-								<div className="rounded-full bg-gradient-to-br from-blue-500/10 to-primary/10 p-3">
-									<MessageSquare className="h-6 w-6 text-primary" />
-								</div>
-								<h3 className="font-display text-xl font-semibold">Social Media Management</h3>
-								<p className="text-center text-muted-foreground">
-									Engaging content and strategy to grow your online presence
-								</p>
-							</div>
-							<div className="flex flex-col items-center space-y-2 rounded-xl border border-border/50 bg-gradient-to-br from-card via-card/95 to-card p-6 shadow-sm hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1 transition-all duration-300">
-								<div className="rounded-full bg-gradient-to-br from-primary/10 to-blue-500/10 p-3">
-									<Palette className="h-6 w-6 text-primary" />
-								</div>
-								<h3 className="font-display text-xl font-semibold">Marketing Materials</h3>
-								<p className="text-center text-muted-foreground">
-									Eye-catching print and digital collateral that drives results
-								</p>
-							</div>
-							<div className="flex flex-col items-center space-y-2 rounded-xl border border-border/50 bg-gradient-to-br from-card via-card/95 to-card p-6 shadow-sm hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1 transition-all duration-300">
-								<div className="rounded-full bg-gradient-to-br from-purple-500/10 to-primary/10 p-3">
-									<ArrowRight className="h-6 w-6 text-primary" />
-								</div>
-								<h3 className="font-display text-xl font-semibold">Marketing Strategy</h3>
-								<p className="text-center text-muted-foreground">
-									Data-driven approaches to reach your target audience
-									effectively
-								</p>
-							</div>
-							<div className="flex flex-col items-center space-y-2 rounded-xl border border-border/50 bg-gradient-to-br from-card via-card/95 to-card p-6 shadow-sm hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1 transition-all duration-300">
-								<div className="rounded-full bg-gradient-to-br from-blue-500/10 to-purple-500/10 p-3">
-									<Globe className="h-6 w-6 text-primary" />
-								</div>
-								<h3 className="font-display text-xl font-semibold">Custom Solutions</h3>
-								<p className="text-center text-muted-foreground">
-									Tailored design and marketing services for your specific needs
-								</p>
-							</div>
-						</div>
-					</div>
-				</section>
-
-				{/* Metrics Section */}
-				<section className="w-full py-16 md:py-24 lg:py-32 bg-gradient-to-b from-muted/30 via-muted/20 to-muted/30 relative overflow-hidden">
-					{/* Subtle gradient overlay */}
-					<div className="absolute inset-0 bg-gradient-to-r from-blue-900/5 via-transparent to-purple-900/5 pointer-events-none"></div>
-					<div className="container px-4 md:px-6 relative z-10">
-						<div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-							<div className="space-y-2">
-								<h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-									Results That Speak
-								</h2>
-								<p className="max-w-[700px] text-muted-foreground md:text-xl">
-									Measurable impact for our clients
-								</p>
-							</div>
-						</div>
-						<div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-							<div className="flex flex-col items-center text-center p-6 rounded-2xl border border-border/50 bg-gradient-to-br from-card/50 via-card/40 to-card/50 backdrop-blur-sm hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1 transition-all duration-300">
-								<div className="font-display text-5xl md:text-6xl font-bold bg-gradient-to-r from-primary via-blue-400 to-primary bg-clip-text text-transparent mb-2">
-									10+
-								</div>
-								<h3 className="font-display text-xl font-semibold mb-2">Clients Helped</h3>
-								<p className="text-muted-foreground text-sm">
-									Successful projects delivered
-								</p>
-							</div>
-							<div className="flex flex-col items-center text-center p-6 rounded-2xl border border-border/50 bg-gradient-to-br from-card/50 via-card/40 to-card/50 backdrop-blur-sm hover:border-purple-500/30 transition-all">
-								<div className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-primary to-purple-400 bg-clip-text text-transparent mb-2">
-									900+
-								</div>
-								<h3 className="font-display text-xl font-semibold mb-2">Total Followers Gained</h3>
-								<p className="text-muted-foreground text-sm">
-									For our clients across platforms
-								</p>
-							</div>
-							<div className="flex flex-col items-center text-center p-6 rounded-2xl border border-border/50 bg-gradient-to-br from-card/50 via-card/40 to-card/50 backdrop-blur-sm hover:border-blue-500/30 transition-all">
-								<div className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-primary to-purple-400 bg-clip-text text-transparent mb-2">
-									+46%
-								</div>
-								<h3 className="font-display text-xl font-semibold mb-2">Engagement Increase</h3>
-								<p className="text-muted-foreground text-sm">
-									Average engagement growth
-								</p>
-							</div>
-						</div>
-					</div>
 				</section>
 
 				{/* Our Work & Testimonials Section */}
@@ -571,6 +445,132 @@ export default function Home() {
 										</Button>
 									</div>
 								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				{/* Metrics Section */}
+				<section className="w-full py-16 md:py-24 lg:py-32 bg-gradient-to-b from-muted/30 via-muted/20 to-muted/30 relative overflow-hidden">
+					{/* Subtle gradient overlay */}
+					<div className="absolute inset-0 bg-gradient-to-r from-blue-900/5 via-transparent to-purple-900/5 pointer-events-none"></div>
+					<div className="container px-4 md:px-6 relative z-10">
+						<div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+							<div className="space-y-2">
+								<h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+									Results That Speak
+								</h2>
+								<p className="max-w-[700px] text-muted-foreground md:text-xl">
+									Measurable impact for our clients
+								</p>
+							</div>
+						</div>
+						<div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+							<div className="flex flex-col items-center text-center p-6 rounded-2xl border border-border/50 bg-gradient-to-br from-card/50 via-card/40 to-card/50 backdrop-blur-sm hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1 transition-all duration-300">
+								<div className="font-display text-5xl md:text-6xl font-bold bg-gradient-to-r from-primary via-blue-400 to-primary bg-clip-text text-transparent mb-2">
+									10+
+								</div>
+								<h3 className="font-display text-xl font-semibold mb-2">Clients Helped</h3>
+								<p className="text-muted-foreground text-sm">
+									Successful projects delivered
+								</p>
+							</div>
+							<div className="flex flex-col items-center text-center p-6 rounded-2xl border border-border/50 bg-gradient-to-br from-card/50 via-card/40 to-card/50 backdrop-blur-sm hover:border-purple-500/30 transition-all">
+								<div className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-primary to-purple-400 bg-clip-text text-transparent mb-2">
+									900+
+								</div>
+								<h3 className="font-display text-xl font-semibold mb-2">Total Followers Gained</h3>
+								<p className="text-muted-foreground text-sm">
+									For our clients across platforms
+								</p>
+							</div>
+							<div className="flex flex-col items-center text-center p-6 rounded-2xl border border-border/50 bg-gradient-to-br from-card/50 via-card/40 to-card/50 backdrop-blur-sm hover:border-blue-500/30 transition-all">
+								<div className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-primary to-purple-400 bg-clip-text text-transparent mb-2">
+									+46%
+								</div>
+								<h3 className="font-display text-xl font-semibold mb-2">Engagement Increase</h3>
+								<p className="text-muted-foreground text-sm">
+									Average engagement growth
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section
+					id="services"
+					className="w-full py-8 md:py-16 lg:py-20 bg-gradient-to-b from-muted via-muted/95 to-muted scroll-mt-16 relative overflow-hidden"
+				>
+					{/* Subtle gradient overlay */}
+					<div className="absolute inset-0 bg-gradient-to-br from-blue-900/5 via-transparent to-purple-900/5 pointer-events-none"></div>
+					<div className="container px-4 md:px-6 relative z-10">
+						<div className="flex flex-col items-center justify-center space-y-4 text-center">
+							<div className="space-y-2">
+								<h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+									Our Services
+								</h2>
+								<p className="max-w-[700px] text-muted-foreground md:text-xl">
+									Comprehensive design and marketing solutions for businesses of
+									all sizes
+								</p>
+							</div>
+						</div>
+						<div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 py-12 md:grid-cols-2 lg:grid-cols-3">
+							<div className="flex flex-col items-center space-y-2 rounded-xl border border-border/50 bg-gradient-to-br from-card via-card/95 to-card p-6 shadow-sm hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1 transition-all duration-300">
+								<div className="rounded-full bg-gradient-to-br from-primary/10 to-blue-500/10 p-3">
+									<Globe className="h-6 w-6 text-primary" />
+								</div>
+								<h3 className="font-display text-xl font-semibold">Website Design & Updates</h3>
+								<p className="text-center text-muted-foreground">
+									Modern, responsive websites that convert visitors into
+									customers
+								</p>
+							</div>
+							<div className="flex flex-col items-center space-y-2 rounded-xl border border-border/50 bg-gradient-to-br from-card via-card/95 to-card p-6 shadow-sm hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1 transition-all duration-300">
+								<div className="rounded-full bg-gradient-to-br from-primary/10 to-purple-500/10 p-3">
+									<PenTool className="h-6 w-6 text-primary" />
+								</div>
+								<h3 className="font-display text-xl font-semibold">Branding & Logo Design</h3>
+								<p className="text-center text-muted-foreground">
+									Distinctive visual identities that make your brand memorable
+								</p>
+							</div>
+							<div className="flex flex-col items-center space-y-2 rounded-xl border border-border/50 bg-gradient-to-br from-card via-card/95 to-card p-6 shadow-sm hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1 transition-all duration-300">
+								<div className="rounded-full bg-gradient-to-br from-blue-500/10 to-primary/10 p-3">
+									<MessageSquare className="h-6 w-6 text-primary" />
+								</div>
+								<h3 className="font-display text-xl font-semibold">Social Media Management</h3>
+								<p className="text-center text-muted-foreground">
+									Engaging content and strategy to grow your online presence
+								</p>
+							</div>
+							<div className="flex flex-col items-center space-y-2 rounded-xl border border-border/50 bg-gradient-to-br from-card via-card/95 to-card p-6 shadow-sm hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1 transition-all duration-300">
+								<div className="rounded-full bg-gradient-to-br from-primary/10 to-blue-500/10 p-3">
+									<Palette className="h-6 w-6 text-primary" />
+								</div>
+								<h3 className="font-display text-xl font-semibold">Marketing Materials</h3>
+								<p className="text-center text-muted-foreground">
+									Eye-catching print and digital collateral that drives results
+								</p>
+							</div>
+							<div className="flex flex-col items-center space-y-2 rounded-xl border border-border/50 bg-gradient-to-br from-card via-card/95 to-card p-6 shadow-sm hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1 transition-all duration-300">
+								<div className="rounded-full bg-gradient-to-br from-purple-500/10 to-primary/10 p-3">
+									<ArrowRight className="h-6 w-6 text-primary" />
+								</div>
+								<h3 className="font-display text-xl font-semibold">Marketing Strategy</h3>
+								<p className="text-center text-muted-foreground">
+									Data-driven approaches to reach your target audience
+									effectively
+								</p>
+							</div>
+							<div className="flex flex-col items-center space-y-2 rounded-xl border border-border/50 bg-gradient-to-br from-card via-card/95 to-card p-6 shadow-sm hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1 transition-all duration-300">
+								<div className="rounded-full bg-gradient-to-br from-blue-500/10 to-purple-500/10 p-3">
+									<Globe className="h-6 w-6 text-primary" />
+								</div>
+								<h3 className="font-display text-xl font-semibold">Custom Solutions</h3>
+								<p className="text-center text-muted-foreground">
+									Tailored design and marketing services for your specific needs
+								</p>
 							</div>
 						</div>
 					</div>

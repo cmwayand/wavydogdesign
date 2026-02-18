@@ -150,34 +150,8 @@ export default function AboutPage() {
 							</div>
 						</div>
 
-						{/* Services Focus Section */}
+						{/* Detailed About Section */}
 						<div className="max-w-[1000px] mx-auto space-y-8">
-							<div className="text-center mb-12">
-								<h2 className="font-display text-3xl font-bold mb-4">What We Do</h2>
-								<p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-									We specialize in creating exceptional websites and building strong brand identities 
-									that help businesses stand out and connect with their audience.
-								</p>
-							</div>
-
-							<div className="grid md:grid-cols-2 gap-8 mb-12">
-								<div className="p-6 rounded-lg border bg-card">
-									<h3 className="font-display text-xl font-semibold mb-3">Website Design & Development</h3>
-									<p className="text-muted-foreground leading-relaxed">
-										Modern, responsive websites optimized for performance and user experience. 
-										From simple business sites to complex web applications.
-									</p>
-								</div>
-								<div className="p-6 rounded-lg border bg-card">
-									<h3 className="font-display text-xl font-semibold mb-3">Brand Identity & Logo Design</h3>
-									<p className="text-muted-foreground leading-relaxed">
-										Distinctive visual identities that capture your essence and resonate with your audience. 
-										From logo design to complete brand guidelines.
-									</p>
-								</div>
-							</div>
-
-							{/* Detailed About Section */}
 							<div className="prose prose-invert max-w-none space-y-6">
 								<div className="bg-card border rounded-lg p-6">
 									<h3 className="font-display text-xl font-semibold mb-4">Why Work With Us</h3>
